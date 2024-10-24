@@ -18,7 +18,7 @@ h1, h2, h3, p{
 .btn{
     border: none;
     outline: none;
-    padding: 0.5em;
+    padding: 0.4em 1em;
     background-color: yellow;
     color: hsl(160, 47%, 36%);
     border-radius: 0;
@@ -67,24 +67,27 @@ main{
     width: 100%;
     color: white;
 }
-.hompage article{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 .homepage .image{
     display: flex;
     width: 100%;
+    margin-bottom: 1.5em;
 }
 .homepage img{
     width: 33.3%;
 }
-header{
-    margin-bottom: 4em;
+
+.about-sect{
+    padding: 3em;
+    width: 100%;
 }
-.homepage-list{
+.about-list{
     display: flex;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5em;
     font-size: 1.7rem;
     font-weight: bold;
+}
+.about-sect p{
+    margin-bottom: 1.5em;
+    width: 50%;
+    color: white;
 }
