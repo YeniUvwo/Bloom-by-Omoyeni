@@ -66,12 +66,18 @@ main{
     align-items: center;
     width: 100%;
     color: white;
-    background-image: url(Images/background-img.jpg);
 }
 .hompage article{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.homepage .image{
+    display: flex;
+    width: 100%;
+}
+.homepage img{
+    width: 33.3%;
 }
 header{
     margin-bottom: 4em;
@@ -81,8 +87,4 @@ header{
     margin-bottom: 2rem;
     font-size: 1.7rem;
     font-weight: bold;
-}
-.bloomFlower{
-    max-width: 50%;
-    min-width: 40%;
 }
