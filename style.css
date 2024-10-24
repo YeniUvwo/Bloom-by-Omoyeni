@@ -1,0 +1,88 @@
+body{
+    font-family: "Cardo", serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ul,li,a{
+    list-style: none;
+    color: yellow;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+h1, h2, h3, p{
+    margin: 0;
+    padding: 0;
+}
+.btn{
+    border: none;
+    outline: none;
+    padding: 0.5em;
+    background-color: yellow;
+    color: hsl(160, 47%, 36%);
+    border-radius: 0;
+}
+
+.container-fluid{
+    padding: 0;
+    background-color: hsl(160, 47%, 36%);
+}
+
+.navbar{
+    padding: 1em 2em;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.logo{
+    color: yellow;
+}
+h1{
+    font-size: 3em;
+}
+.logo p{
+    font-size: 1em;
+    margin: -0.5rem 0 2rem 5rem;
+}
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.navbar li{
+    margin: 0 1em;
+    font-size: 1.3rem;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homepage{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    color: white;
+    background-image: url(Images/background-img.jpg);
+}
+.hompage article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header{
+    margin-bottom: 4em;
+}
+.homepage-list{
+    display: flex;
+    margin-bottom: 2rem;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+.bloomFlower{
+    max-width: 50%;
+    min-width: 40%;
+}
