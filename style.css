@@ -1,93 +1,165 @@
-body{
-    font-family: "Cardo", serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+body,
+*{
+	font-family: "Cardo", serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+a{
+	color: hsl(160, 47%, 36%);
 }
 ul,li,a{
-    list-style: none;
-    color: yellow;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
+	list-style: none;
+	text-decoration: none;
 }
 h1, h2, h3, p{
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 .btn{
-    border: none;
-    outline: none;
-    padding: 0.4em 1em;
-    background-color: yellow;
-    color: hsl(160, 47%, 36%);
-    border-radius: 0;
+	border: none;
+	outline: none;
+	padding: 0.4em 1.2em;
+	background-color: yellow;
+	color: hsl(160, 47%, 36%);
+	border-radius: 0;
 }
 
 .container-fluid{
     padding: 0;
-    background-color: hsl(160, 47%, 36%);
 }
 
+/* navbar */
 .navbar{
     padding: 1em 2em;
-    background-color: rgba(0, 0, 0, 0.1);
+		background-color: yellow;
 }
 .logo{
     color: yellow;
+		width: 50%;
 }
-h1{
-    font-size: 3em;
+.logo img{
+	width: 20%;
 }
-.logo p{
-    font-size: 1em;
-    margin: -0.5rem 0 2rem 5rem;
-}
-.navbar-nav{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.navbar li{
-    margin: 0 1em;
-    font-size: 1.3rem;
-}
-
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.homepage{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    color: white;
-}
-.homepage .image{
-    display: flex;
-    width: 100%;
-    margin-bottom: 1.5em;
-}
-.homepage img{
-    width: 33.3%;
-}
-
-.about-sect{
-    padding: 3em;
-    width: 100%;
-}
-.about-list{
-    display: flex;
-    margin-bottom: 0.5em;
-    font-size: 1.7rem;
+/* h1{
+    font-size: clamp(1.5em, 2em, 2.5em);
     font-weight: bold;
 }
-.about-sect p{
-    margin-bottom: 1.5em;
-    width: 50%;
-    color: white;
+.logo p{
+    font-size: clamp(0.5em, 0.9em, 1em);
+    margin: -0.5rem 0 2rem 5rem;
+} */
+.navbar-nav{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.navbar li{
+	margin: 0 1em;
+	font-size: clamp(1.3rem, 1.1vw, 1.5rem);
+	font-weight: bold;
+}
+@media (max-width:540px) {
+	.navbar-nav{
+		flex-direction: column;
+	}
+}
+
+/* main */
+main{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* homepage */
+.homepage{
+	width: 100%;
+	padding: 10em;
+	margin: 0 auto;
+	background-color: white;
+	/* color: hsl(160, 47%, 36%); */
+	color: white;
+	text-align: center;
+	background-image: url(Images/background-img.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.homepage-maintext{
+	font-size: clamp(1.5rem, 3vw, 3.5rem);
+	font-weight: bold;
+}
+.homepage ul{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1em;
+	color: yellow;
+	font-size: clamp(1.2rem, 1.7vw, 2.1rem);
+	margin-bottom: 0.5em;
+}
+.homepage-subtext{
+	font-size: clamp(1rem, 1.3vw, 1.5rem);
+	width: 60%;
+	margin: 0 auto 1.3em;
+}
+
+/* services */
+.services_container{
+	background-color: white;
+	width: 100%;
+	padding: 5em;
+	text-align: center;
+}
+.services_enhance{
+	font-size: clamp(1.5em, 2vw, 2.5em);
+	font-weight: bold;
+	margin-bottom: 1.5em;
+	color: hsl(160, 47%, 36%);
+}
+.services{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+.services .box{
+	width: 350px;
+	height: 350px;
+	justify-content: center;
+	color: white;
+	font-size: clamp(1em, 2vw, 2.5em);
+	border-radius: 20px;
+	position: relative;
+}
+.services p{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-weight: bold;
+}
+.lawn_maintenance{
+	background-image: url(Images/Lawn_maintenance.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.green_products{
+	background-image: url(Images/green_products.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.carbon_emission{
+	background-image: url(Images/carbon_emission.avif);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-y: 45%;
+}
+
+/* footer */
+footer{
+	width: 100%;
+	background-color: yellow;
+	padding: 5em;
 }
