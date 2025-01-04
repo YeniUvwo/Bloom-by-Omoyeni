@@ -35,21 +35,85 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav">
-					<li class="nav-item">
-						<button class="nav-link" type="button" id="about-us" aria-label="About Us">About Us</button>
+					<li class="nav-item dropdown">
+						<a href="./Shop/" class="nav-link" type="button" id="shop" aria-label="Shop">Shop</a>
 					</li>
-					<li class="nav-item">
-						<button class="nav-link" type="button" id="shop" aria-label="Shop">Shop</button>
+					<li class="nav-item dropdown">
+						<button class="nav-link dropdown-toggle" type="button" id="services" aria-label="Services">Services</button>
+						<ul class="dropdown-menu">
+							<li class="dropdown-item dropdown-nolink">Landscaping & Lawn Maintenance</li>
+							<li class="dropdown-item dropdown-nolink">Climate Products/Technologies</li>
+							<li class="dropdown-item dropdown-nolink">Carbon Emission</li>
+						</ul>
 					</li>
-					<li class="nav-item">
-						<button class="nav-link" type="button" id="services" aria-label="Services">Services</button>
-					</li>
-					<li class="nav-item">
-						<button class="nav-link" type="button" id="contact" aria-label="Contact">Contact</button>
+					<li class="nav-item dropdown">
+						<button class="nav-link  dropdown-toggle" type="button" href="contact" id="contact"  aria-label="contact-button" aria-expanded="false">Contact</button>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#emailLink" id="" data-bs-toggle="modal" data-bs-target="#supportModal">support@gptsl.ng</a></li>
+						</ul>
 					</li>
 				</ul>
 			</div>
 		</nav>
+
+		<div class="modal fade right" id="supportModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="modalTitle">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="modal-title" id="modalTitle"> Send us a message</div>
+					</div>
+					<div class="modal-body">
+						<form class="needs-validation" action="https://formspree.io/f/mrbzwnbe" method="POST" id="supportForm" novalidate>
+							<div class="mb-3">
+								<label for="nameCompany" class="form-label">Name/Company:</label>
+								<input type="text" class="form-control" id="nameCompany" name="nameCompany" required>
+								<div class="invalid-feedback">
+									Name/Company is required
+								</div>
+							</div>
+							<div class="mb-3">
+								<label for="guestEmail" class="form-label">Email:</label>
+								<input type="email" class="form-control" id="guestEmail" name="guestEmail" placeholder="name@example.com" required>
+								<div class="invalid-feedback">
+									Please enter a valid email address
+								</div>
+							</div>
+							<div class="mb-3">
+								<label for="guestNumber" class="form-label">Phone Number:</label>
+								<input type="tel" class="form-control" placeholder="Please include country code e.g +234" id="guestNumber" name="guestNumber" required>
+								<div class="invalid-feedback">
+									Required field
+								</div>
+							</div>
+							<div class="message-textarea">
+								<label class="textarea-label" for="floatingTextarea">Message:</label>
+								<textarea class="form-control modal-message" placeholder="Leave your message here" id="floatingTextarea" name="message" required></textarea>
+								<div class="invalid-feedback">
+									Kindly leave us a message
+								</div>
+							</div>
+							<div class="modal-btn-container">
+								<button class="btn cancel-btn" aria-label="cancel-btn" type="button" data-bs-dismiss="modal" id="supportCancelButton">Cancel</button>
+								<button class="btn submit-btn" aria-label="submit-btn" type="submit">Submit</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade right thankYouModal" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content thankYouModalContent">
+					<div class="modal-body thankyouMessageContainer">
+						<i class="fa-sharp fa-solid fa-check" style="color: #297f65;"></i>
+						<p class="thankYouMessagea">Thank You For Your Submission!</p>
+						<p class="thankYouMessageb">We will get back to you shortly.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
 
 		<!-- Main Content -->
 		<main>
@@ -58,13 +122,13 @@
 				<p class="homepage-maintext">Reduce Carbon. Save the Planet.</p>
 				<p class="homepage-li">gardening || landscaping || sustainability</p>
 				<p class="homepage-subtext">We are passionate about using sustainable gardening products and landscaping techniques to protect the environment and beautify spaces.</p>
-				<button class="btn btn-light">About Us</button>
+				<a href="./Shop/" class="btn btn-light">SHOP</a>
 			</section>
 
 			<!-- Services Section -->
 			<section class="services_container">
 				<p class="services_enhance">Enhance Your Space with Our Services</p>
-				<div class="services">
+				<div class="services" id="services">
 					<div class="lawn_maintenance box">
 						<img src="Images/Lawn_maintenance.jpg" alt="Landscaping and Lawn Maintenance">
 						<p>Landscaping & Lawn Maintenance</p>
@@ -74,7 +138,7 @@
 						<p>Climate Products/Technologies</p>
 					</div>
 					<div class="carbon_emission box">
-						<img src="Images/carbon_emission.avif" alt="Carbon Emission Services">
+						<img src="Images/carbon_emission.jpg" alt="Carbon Emission Services">
 						<p>Carbon Emission</p>
 					</div>
 				</div>
@@ -84,11 +148,10 @@
 		<!-- Footer -->
 		<footer>
 			<div class="footer-content">
-				<!-- logo & footer about-->
-				 <div class="logo-footer-about">
-					<!-- Logo Section -->
+				<div class="logo-footer-about">
 					<div class="footer-logo">
-						<img src="Images/Transparent logo.png" alt="Bloom by Omoyeni Logo">
+						<h4 class="about-bloom">About Us</h4>
+						<p class="subsidiary-text">Subsidiary of <a href="https://gptsl.ng/" class="parent-company" target="_blank"> GPTSL</a></p>
 						<p>Dedicated to promoting sustainability through innovative landscaping, gardening solutions, and climate-friendly technologies.</p>
 						<p class="join-us-p">Join us in building a greener tomorrow.</p>
 					</div>
@@ -98,8 +161,7 @@
 				<div class="footer-links">
 					<h4>Quick Links</h4>
 					<ul>
-						<li><a href="#about-us">About Us</a></li>
-						<li><a href="#shop">Shop</a></li>
+						<li><a href="./Shop/">Shop</a></li>
 						<li><a href="#services">Services</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
@@ -109,17 +171,15 @@
 				<div class="footer-contact">
 					<h4>Contact Us</h4>
 					<p>Email: <a href="mailto:support@gptsl.ng">support@gptsl.ng</a></p>
-					<p>Phone: <a href="tel:+2348123456789"> +234 909 361 0137 </a></p>
-					<p>Address: Inoyo Haven Estate, Lekki Lagos, Nigeria</p>
+					<p>Phone: <a href="tel:+2348123456789"> +234 807 511 4643 </a></p>
 				</div>
 	
 				<!-- Social Media -->
 				<div class="social-icons">
 					<h4>Follow Us</h4>
-					<!-- <a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook"></i></a> -->
 					<a href="" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
 					<a href="" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-					<a href="" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+					<a href="https://www.linkedin.com/company/greenpath-technology-services-gptsl/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
 				</div>
 			</div>
 	
