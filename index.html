@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="Images/favicon_io/favicon.ico" type="image/x-icon">
-    <title>Bloom by Omoyéni</title>
+    <link rel="shortcut icon" href="/assets/images/favicon_io/favicon.ico" type="image/x-icon">
+    <title>BloombyOmoyéni</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -27,32 +27,87 @@
 	<div class="container-fluid">
 		<!-- Navbar -->
 		<nav class="navbar navbar-expand-lg">
-			<div class="navbar-logo">
-				<img src="Images/Transparent logo.png" alt="Bloom by Omoyeni Logo">
+			<div class="container-fluid">
+				<div class="navbar-logo">
+					<img src="/assets/images/bloom_logo.png" alt="Bloom by Omoyeni Logo">
+					<div class="logo-text">
+						<p class="bloom">Bloom</p>
+						<p class="byYeni">byOmoyeni</p>
+					</div>
+				</div>
+
+				<button 
+					class="navbar-toggler" 
+					type="button" 
+					data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" 
+					aria-expanded="false" 
+					aria-label="Toggle navigation">
+
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			
+				<div class="collapse navbar-collapse d-none d-lg-block" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item dropdown">
+							<a href="./shop/" class="nav-link" type="button" id="shop" aria-label="shop">Shop</a>
+						</li>
+						<li class="nav-item dropdown">
+							<button class="nav-link dropdown-toggle" type="button" id="services" aria-label="Services">Services</button>
+							<ul class="dropdown-menu">
+								<li class="dropdown-item dropdown-nolink">Landscaping & Lawn Maintenance</li>
+								<li class="dropdown-item dropdown-nolink">Climate Products/Technologies</li>
+								<li class="dropdown-item dropdown-nolink">Carbon Emission</li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<button class="nav-link  dropdown-toggle" type="button" href="contact" id="contact"  aria-label="contact-button" aria-expanded="false">Contact</button>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#emailLink" id="" data-bs-toggle="modal" data-bs-target="#supportModal">support@gptsl.ng</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 			</div>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav">
-					<li class="nav-item dropdown">
-						<a href="./Shop/" class="nav-link" type="button" id="shop" aria-label="Shop">Shop</a>
-					</li>
-					<li class="nav-item dropdown">
-						<button class="nav-link dropdown-toggle" type="button" id="services" aria-label="Services">Services</button>
-						<ul class="dropdown-menu">
-							<li class="dropdown-item dropdown-nolink">Landscaping & Lawn Maintenance</li>
-							<li class="dropdown-item dropdown-nolink">Climate Products/Technologies</li>
-							<li class="dropdown-item dropdown-nolink">Carbon Emission</li>
-						</ul>
-					</li>
-					<li class="nav-item dropdown">
-						<button class="nav-link  dropdown-toggle" type="button" href="contact" id="contact"  aria-label="contact-button" aria-expanded="false">Contact</button>
-						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#emailLink" id="" data-bs-toggle="modal" data-bs-target="#supportModal">support@gptsl.ng</a></li>
-						</ul>
-					</li>
-				</ul>
+
+			<!-- Modal for Smaller Screens -->
+			<div 
+				class="modal fade d-lg-none" 
+				id="hamburgerModal" 
+				tabindex="-1" 
+				aria-hidden="true" 
+				aria-labelledby="hamburgerModalLabel">
+				<div class="modal-dialog modal-dialog-slide">
+					<div class="modal-content nav-modal-content">
+							<div class="modal-header nav-modal-header">
+								<button 
+									type="button" 
+									class="btn-close" 
+									data-bs-dismiss="modal" 
+									aria-label="Close">
+								</button>
+							</div>
+						<div class="modal-body nav-modal-body">
+							<ul class="navbar-nav">
+								<li class="nav-item dropdown">
+									<a href="./shop/" class="nav-link" type="button" id="shop" aria-label="shop">Shop</a>
+								</li>
+								<li class="nav-item dropdown">
+									<button class="nav-link dropdown-toggle" type="button" id="services" aria-label="Services">Services</button>
+									<ul class="dropdown-menu">
+										<li class="dropdown-item dropdown-nolink">Landscaping & Lawn Maintenance</li>
+										<li class="dropdown-item dropdown-nolink">Climate Products/Technologies</li>
+										<li class="dropdown-item dropdown-nolink">Carbon Emission</li>
+									</ul>
+								</li>
+								<li class="nav-item dropdown">
+									<button class="nav-link  dropdown-toggle" type="button" href="contact" id="contact"  aria-label="contact-button" aria-expanded="false">Contact</button>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="#emailLink" id="" data-bs-toggle="modal" data-bs-target="#supportModal">support@gptsl.ng</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+				</div>
 			</div>
 		</nav>
 
@@ -130,15 +185,15 @@
 				<p class="services_enhance">Enhance Your Space with Our Services</p>
 				<div class="services" id="services">
 					<div class="lawn_maintenance box">
-						<img src="Images/Lawn_maintenance.jpg" alt="Landscaping and Lawn Maintenance">
+						<img src="/assets/images/Lawn_maintenance.jpg" alt="Landscaping and Lawn Maintenance">
 						<p>Landscaping & Lawn Maintenance</p>
 					</div>
 					<div class="climate_products box">
-						<img src="Images/green_products.jpg" alt="Climate Products and Technologies">
+						<img src="/assets/images/green_products.jpg" alt="Climate Products and Technologies">
 						<p>Climate Products/Technologies</p>
 					</div>
 					<div class="carbon_emission box">
-						<img src="Images/carbon_emission.jpg" alt="Carbon Emission Services">
+						<img src="/assets/images/carbon_emission.jpg" alt="Carbon Emission Services">
 						<p>Carbon Emission</p>
 					</div>
 				</div>

@@ -1,0 +1,9 @@
+# Ignore .env file
+.htaccess
+.env
+
+# Ignore vendor directory if using Composer
+/vendor/
+
+# Ignore other sensitive files
+/storage/*.log

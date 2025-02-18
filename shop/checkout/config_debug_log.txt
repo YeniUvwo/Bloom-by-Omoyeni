@@ -1,0 +1,38 @@
+✅ config.php execution started
+✅ Step 1: Checking vendor/autoload.php
+✅ Step 1: vendor/autoload.php loaded
+✅ Step 2: Attempting to load .env file
+✅ Step 2: .env file loaded successfully
+✅ Step 3: PAYSTACK_SECRET exists
+✅ Step 4: config.php is about to exit
+✅ config.php execution started
+✅ Step 1: Checking vendor/autoload.php
+✅ Step 1: vendor/autoload.php loaded
+✅ Step 2: Attempting to load .env file
+✅ Step 2: .env file loaded successfully
+✅ Step 3: PAYSTACK_SECRET exists
+✅ Step 4: config.php is about to exit
+✅ config.php execution started
+✅ Step 1: Checking vendor/autoload.php
+✅ Step 1: vendor/autoload.php loaded
+✅ Step 2: Attempting to load .env file
+✅ Step 2: .env file loaded successfully
+✅ Step 3: PAYSTACK_SECRET exists
+✅ Step 4: config.php is about to exit
+✅ Step 3.5: config.php successfully loaded
+✅ Step 4: Initiating Paystack verification...
+✅ Step 5: Paystack API Response:
+{"status":true,"message":"Verification successful","data":{"id":4697820212,"domain":"test","status":"success","reference":"FLWR_1739805078850","receipt_number":null,"amount":11900000,"message":null,"gateway_response":"Successful","paid_at":"2025-02-17T15:11:28.000Z","created_at":"2025-02-17T15:11:24.000Z","channel":"card","currency":"NGN","ip_address":"102.218.200.22","metadata":{"referrer":"http://127.0.0.1:5500/shop/checkout/index.html"},"log":{"start_time":1739805083,"time_spent":4,"attempts":1,"errors":0,"success":true,"mobile":false,"input":[],"history":[{"type":"action","message":"Attempted to pay with card","time":2},{"type":"success","message":"Successfully paid with card","time":4}]},"fees":188500,"fees_split":null,"authorization":{"authorization_code":"AUTH_gbojd2yb20","bin":"408408","last4":"4081","exp_month":"12","exp_year":"2030","channel":"card","card_type":"visa ","bank":"TEST BANK","country_code":"NG","brand":"visa","reusable":true,"signature":"SIG_uNatqwNBDsEOZdTGyOdk","account_name":null,"receiver_bank_account_number":null,"receiver_bank":null},"customer":{"id":234217933,"first_name":"","last_name":"","email":"omoyenney@gmail.com","customer_code":"CUS_omaffahbsnu5g81","phone":"","metadata":null,"risk_action":"default","international_format_phone":null},"plan":null,"split":{},"order_id":null,"paidAt":"2025-02-17T15:11:28.000Z","createdAt":"2025-02-17T15:11:24.000Z","requested_amount":11900000,"pos_transaction_data":null,"source":null,"fees_breakdown":null,"connect":null,"transaction_date":"2025-02-17T15:11:24.000Z","plan_object":{},"subaccount":{}}}
+✅ Step 7: Payment Verified
+✅ config.php execution started
+✅ Step 1: Checking vendor/autoload.php
+✅ Step 1: vendor/autoload.php loaded
+✅ Step 2: Attempting to load .env file
+✅ Step 2: .env file loaded successfully
+✅ Step 3: PAYSTACK_SECRET exists
+✅ Step 4: config.php is about to exit
+✅ Step 3.5: config.php successfully loaded
+✅ Step 4: Initiating Paystack verification...
+✅ Step 5: Paystack API Response:
+{"status":true,"message":"Verification successful","data":{"id":4697833276,"domain":"test","status":"success","reference":"FLWR_1739805422335","receipt_number":null,"amount":7100000,"message":null,"gateway_response":"Successful","paid_at":"2025-02-17T15:17:10.000Z","created_at":"2025-02-17T15:17:06.000Z","channel":"card","currency":"NGN","ip_address":"102.218.200.22","metadata":{"referrer":"http://127.0.0.1:5500/shop/checkout/index.html"},"log":{"start_time":1739805426,"time_spent":3,"attempts":1,"errors":0,"success":true,"mobile":false,"input":[],"history":[{"type":"action","message":"Attempted to pay with card","time":2},{"type":"success","message":"Successfully paid with card","time":3}]},"fees":116500,"fees_split":null,"authorization":{"authorization_code":"AUTH_arlzusywee","bin":"408408","last4":"4081","exp_month":"12","exp_year":"2030","channel":"card","card_type":"visa ","bank":"TEST BANK","country_code":"NG","brand":"visa","reusable":true,"signature":"SIG_uNatqwNBDsEOZdTGyOdk","account_name":null,"receiver_bank_account_number":null,"receiver_bank":null},"customer":{"id":234217933,"first_name":"","last_name":"","email":"omoyenney@gmail.com","customer_code":"CUS_omaffahbsnu5g81","phone":"","metadata":null,"risk_action":"default","international_format_phone":null},"plan":null,"split":{},"order_id":null,"paidAt":"2025-02-17T15:17:10.000Z","createdAt":"2025-02-17T15:17:06.000Z","requested_amount":7100000,"pos_transaction_data":null,"source":null,"fees_breakdown":null,"connect":null,"transaction_date":"2025-02-17T15:17:06.000Z","plan_object":{},"subaccount":{}}}
+✅ Step 7: Payment Verified

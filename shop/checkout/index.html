@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../assets/images/favicon_io/favicon.ico" type="image/x-icon">
+    <title>Checkout</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <script src="https://kit.fontawesome.com/8f11bc9294.js" crossorigin="anonymous"></script>
+
+  <!-- Remix Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+         <h1 class="empty-cart-header"><a href="../cart/"><span class="shopping-cart">SHOPPING CART <i class="ri-arrow-right-line"></i></span> </a><span class="checkout">CHECKOUT <i class="ri-arrow-right-line"></i></span> <span>ORDER COMPLETE</span></h1>
+    </div>
+    <div class="container-fluid">    
+        <div class="billing">
+            <h2>BILLING DETAILS</h2>
+            <form id="checkout-form" onsubmit="return handleCheckout(event)">
+                <div class="full-name">
+                    <div class="mb-3">
+                        <label for="firstName" class="form-label">First Name:</label>
+                        <input type="text" id="firstName" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="lastName" class="form-label">Last Name:</label>
+                        <input type="text" id="lastName" class="form-control" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label">Full Address:</label>
+                    <textarea id="address" class="form-control" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number:</label>
+                    <input type="number" id="phone" class="form-control" required>
+                </div>
+            </form>
+            <p id="error-message" class="text-danger"></p>
+            <div class="back-to-shop-container">
+                <a href="../cart/index.html" class="btn back-to-shop">← Back to Cart</a>
+            </div>
+        </div>
+
+        <div class="confirm-order">
+            <h2>YOUR ORDER</h2>
+
+            <div id="cart-items" class="mb-4"></div>
+
+            <div class="checkout-summary">
+                <div class="box">
+                    <p>Subtotal</p>
+                    <p><strong>₦<span id="subtotal">0</span></strong></p>
+                </div>
+                <div class="box">
+                    <p>Shipping</p>
+                    <strong><p id="shipping">₦0</p></strong>
+                </div>
+                <div class="box">
+                    <p>Total</p>
+                    <strong><p id="total-amount">₦0</p></strong>
+                </div>
+            </div>
+            <form action="">
+                <div class="mb-3 payment-option">
+                    <label for="payment" class="form-label">Payment Method:</label>
+                    <select id="payment" class="form-select" onchange="toggleBankDetails()">
+                        <option value="card">Debit/Credit Card</option>
+                        <option value="transfer">Bank Transfer</option>
+                    </select>
+                </div>
+                <div id="card-payment-image" style="display: none; text-align: center; margin-top: 10px;">
+                    <img src="/assets/images/secured-by-paystack.png" alt="Payment Methods" style="max-width: 200px; height: auto;">
+                </div>                
+                <div id="bank-transfer-details" class="alert alert-info" style="display: none;">
+                    <p><strong>Payment Instructions:</strong></p>
+                    <p>Kindly make payment into our bank account:</p>
+                    <p><strong>Greenpath Technology Services Limited<br>0050744449 Stanbic IBTC Bank</strong></p>
+                    <p>Please use your Order ID as the payment reference.</p>
+                </div>
+                <div id="order-confirmation" class="alert alert-success" style="display: none;">
+                    <h4>Thank you for your order!</h4>
+                    <p>Your order ID is: <strong id="orderId"></strong></p>
+                    <p>Once payment is confirmed, we will process your order.</p>
+                </div>
+            </form>
+            <p id="error-message" class="text-danger"></p>
+
+            <button type="button" id="confirm-order-btn" class="btn btn-success">Confirm Order & Pay</button>
+        </div>
+    </div>
+<script type="module" src="script.js"></script>
+<script src="https://js.paystack.co/v1/inline.js"></script>
+</body>
+</html>

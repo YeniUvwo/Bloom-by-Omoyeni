@@ -1,0 +1,20 @@
+[
+  {
+    "id": 5,
+    "name": "Anthurium Plant",
+    "price": 45000,
+    "img": "../assets/images/anthurium_plant.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Indoor Plant",
+    "price": 66000,
+    "img": "../assets/images/indoor_plants.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Violet Flower",
+    "price": 43000,
+    "img": "../assets/images/violet_flower.jpg"
+  }
+]

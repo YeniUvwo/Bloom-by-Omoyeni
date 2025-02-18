@@ -104,4 +104,8 @@ document.addEventListener("DOMContentLoaded", function () {
     resetForm(supportForm);
   });
 
+  document.querySelector('.navbar-toggler').addEventListener('click', () => {
+    const modal = new bootstrap.Modal(document.getElementById('hamburgerModal'));
+    modal.show();
+  });
 })

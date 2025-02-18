@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1, 
+    "name": "Elegant Vase",
+    "price": 25000, 
+    "img": "../assets/images/elegant_vase.jpg", 
+    "inStock": true
+  },
+  {
+    "id": 2, 
+    "name": "Stylish Vase",
+    "price": 5000, 
+    "img": "../assets/images/stylish_vase.jpg", 
+    "inStock": true
+  },
+  {
+    "id": 3, 
+    "name": "Modern Vase", 
+    "price": 36000, 
+    "img": "../assets/images/modern_vase.jpg", 
+    "inStock": true
+  },
+  {
+    "id": 4, 
+    "name": "Alocasia Polly Plant", 
+    "price": 25000, 
+    "img": "../assets/images/alocasia_polly_plant.jpg", 
+    "inStock": true
+  },
+  {
+    "id": 5, 
+    "name": "Anthurium Plant", 
+    "price": 45000, 
+    "img": "../assets/images/anthurium_plant.jpg", 
+    "inStock": true
+  },
+  {
+    "id": 6, 
+    "name": "Color Flower", 
+    "price": 53000, 
+    "img": "../assets/images/color_flower.jpg", 
+    "inStock": true
+  },
+  {
+    "id": 7, 
+    "name": "Grass Pot", 
+    "price": 23000, 
+    "img": "../assets/images/grass_pot.jpg", 
+    "inStock": true
+  },
+  {
+    "id": 8, 
+    "name": "Indoor Plant",
+    "price": 66000, 
+    "img": "../assets/images/indoor_plants.jpg", 
+    "inStock": true},
+  {
+    "id": 9, 
+    "name": "Peace Lily Plant", 
+    "price": 30000, 
+    "img": "../assets/images/peace_lily_plant.jpg", 
+    "inStock": true
+  },
+  {
+    "id": 10, 
+    "name": "Peperomia Plant", 
+    "price": 36000, 
+    "img": "../assets/images/watermelon_peperomia_plant.jpg", 
+    "inStock": true
+  },
+  {
+    "id": 11, 
+    "name": "Violet Flower", 
+    "price": 43000, 
+    "img": "../assets/images/violet_flower.jpg", 
+    "inStock": true}
+]

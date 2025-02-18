@@ -1,0 +1,132 @@
+*{
+  box-sizing: border-box;  
+}
+
+h1{
+  background-color: #218838;
+  padding: 1.5em;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.checkout{
+  color: yellow;
+}
+
+.container-fluid{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 2em 4em;
+}
+@media(max-width:940px){
+  .container-fluid{
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .confirm-order{
+    width: 60%;
+  }
+}
+
+h2{
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5em;
+}
+
+label{
+  font-size: 1rem;
+}
+
+input{
+  font-size: 0.9rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ccc;
+}
+
+.full-name{
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.checkout-item{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.8em;
+  margin-bottom: 1em;
+}
+
+.cart-item-img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+h6{
+  font-size: 0.9rem;;
+}
+
+p.price{
+  font-size: 0.9rem;
+}
+
+.quantity{
+  font-size: 0.9rem;
+  margin: 0 0.3em;
+}
+
+.quantity-price{
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.checkout-summary{
+  margin-bottom: 1em;
+}
+
+.payment-option select{
+  cursor: pointer;
+}
+
+.box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.box p{
+  font-size: 1rem;
+}
+
+.btn{
+  margin-top: 2em;
+}
+
+.text-center{
+  padding-bottom: 2em !important;
+}
+
+.back-to-shop{
+  font-size: 0.9rem;
+  color: #4CAF50;
+}
