@@ -1,24 +1,15 @@
 <?php
 session_start();
+error_log("Session Data Retrieved in success.php: " . print_r($_SESSION, true));
 
-// ✅ Debug: Print the GET request to check received values
-error_log("Received GET Data: " . print_r($_GET, true));
-
-// ✅ Retrieve order details from the URL parameters
+// Retrieve data from query parameters
 $order_id  = $_GET['order_id'] ?? "Unknown";
 $firstName = $_GET['firstName'] ?? "Not Provided";
 $lastName  = $_GET['lastName'] ?? "";
 $email     = $_GET['email'] ?? "Not Provided";
 $fullName  = trim("$firstName $lastName");
 
-// ✅ Debug: Log received values
 error_log("Order ID: $order_id, Name: $fullName, Email: $email");
-
-// ✅ Store details in session for persistence
-$_SESSION['orderId'] = $order_id;
-$_SESSION['customerFirstName'] = $firstName;
-$_SESSION['customerLastName'] = $lastName;
-$_SESSION['customerEmail'] = $email;
 ?>
 
 <!DOCTYPE html>
@@ -45,9 +36,9 @@ $_SESSION['customerEmail'] = $email;
                 <h4>Order Details</h4>
             </div>
             <div class="card-body">
-                <p><strong>Order Number:</strong> <?php echo htmlspecialchars($order_id); ?></p>
-                <p><strong>Name:</strong> <?php echo htmlspecialchars($fullName); ?></p>
-                <p><strong>Email:</strong> <?php echo htmlspecialchars($email); ?></p>
+                <p><strong>Order Number:</strong> <span id="order-id"><?php echo htmlspecialchars($order_id); ?></span></p>
+                <p><strong>Name:</strong> <span id="full-name"><?php echo htmlspecialchars($fullName); ?></span></p>
+                <p><strong>Email:</strong> <span id="email"><?php echo htmlspecialchars($email); ?></span></p>
             </div>
         </div>
 
@@ -61,13 +52,13 @@ $_SESSION['customerEmail'] = $email;
             console.log("✅ Success page loaded.");
             console.log("🔍 Checking sessionStorage after redirection:", sessionStorage);
 
+            // Clear sessionStorage and localStorage after a delay
             setTimeout(() => {
-                console.log("🧹 Clearing sessionStorage now...");
+                console.log("🧹 Clearing sessionStorage and localStorage now...");
                 sessionStorage.clear();
                 localStorage.removeItem("cart");
             }, 5000);
         });
     </script>
-
 </body>
 </html>

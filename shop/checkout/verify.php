@@ -2,40 +2,24 @@
 session_start();
 header("Content-Type: application/json");
 
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
+// Add CORS headers
+header("Access-Control-Allow-Origin: *"); // Allow all domains (or specify your domain)
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS"); // Allow specific HTTP methods
+header("Access-Control-Allow-Headers: Content-Type, Authorization"); // Allow specific headers
 
-$logFile = __DIR__ . "/verify_log.txt";
-file_put_contents($logFile, "✅ Step 1: verify.php started\n", FILE_APPEND);
-flush();
-sleep(1);
+require_once "config.php";
 
-// ✅ Step 2: Check if `reference` is received
-if (!isset($_GET['reference']) || empty($_GET['reference'])) {
-    file_put_contents($logFile, "❌ Step 2: No reference supplied\n", FILE_APPEND);
-    echo json_encode(["step" => 2, "message" => "No reference supplied"]);
+// Retrieve JSON data from the request body
+$data = json_decode(file_get_contents("php://input"), true);
+
+if (!isset($data['reference']) || empty($data['reference'])) {
+    echo json_encode(["status" => "error", "message" => "No reference supplied"]);
     exit();
 }
 
-$reference = htmlspecialchars($_GET['reference']);
-file_put_contents($logFile, "✅ Step 2: Reference received: " . $reference . "\n", FILE_APPEND);
-flush();
-sleep(1);
+$reference = htmlspecialchars($data['reference']);
 
-// ✅ Step 3: Load Config
-file_put_contents($logFile, "✅ Step 3: Loading config.php\n", FILE_APPEND);
-flush();
-sleep(1);
-require_once "config.php";
-file_put_contents($logFile, "✅ Step 3.5: config.php successfully loaded\n", FILE_APPEND);
-flush();
-sleep(1);
-
-// ✅ Step 4: Proceed with Paystack verification
-file_put_contents($logFile, "✅ Step 4: Initiating Paystack verification...\n", FILE_APPEND);
-flush();
-sleep(1);
-
+// ✅ Step 1: Call Paystack API
 $url = "https://api.paystack.co/transaction/verify/" . rawurlencode($reference);
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
@@ -47,35 +31,29 @@ $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 $curlError = curl_error($ch);
 curl_close($ch);
 
-// ✅ Step 5: Log Paystack Response
-file_put_contents($logFile, "✅ Step 5: Paystack API Response:\n" . $response . "\n", FILE_APPEND);
-flush();
-sleep(1);
-
-// ✅ Step 6: Handle Errors
 if (!$response) {
-    file_put_contents($logFile, "❌ Step 6: cURL Error: " . $curlError . "\n", FILE_APPEND);
     echo json_encode(["status" => "error", "message" => "cURL Error: " . $curlError]);
     exit();
 }
 
 $result = json_decode($response, true);
 
-// ✅ Step 7: Check if Payment was Successful
+// ✅ Step 2: Handle Verification Result
 if ($httpCode === 200 && isset($result['data']['status']) && $result['data']['status'] === 'success') {
-    $_SESSION['order_id'] = $reference;
-    session_write_close();
+    // Set session data
+    $_SESSION['orderId'] = $reference;
+    $_SESSION['customerFirstName'] = $data['firstName'] ?? "Not Provided";
+    $_SESSION['customerLastName'] = $data['lastName'] ?? "";
+    $_SESSION['customerEmail'] = $data['email'] ?? "Not Provided";
 
-    file_put_contents($logFile, "✅ Step 7: Payment Verified\n", FILE_APPEND);
+    // Debug: Log session data
+    error_log("Session Data Set in verify.php: " . print_r($_SESSION, true));
 
-    echo json_encode([
-        "status" => "success",
-        "message" => "Payment verified. Redirecting...",
-        "redirect_url" => "success.php?order_id=" . urlencode($reference)
-    ]);
+    session_write_close(); // Ensure session is saved
+    echo json_encode(["status" => "success", "message" => "Payment verified. Redirecting..."]);
     exit();
 } else {
-    file_put_contents($logFile, "❌ Step 7: Payment verification failed: " . json_encode($result) . "\n", FILE_APPEND);
     echo json_encode(["status" => "error", "message" => "Payment verification failed."]);
     exit();
 }
+?>

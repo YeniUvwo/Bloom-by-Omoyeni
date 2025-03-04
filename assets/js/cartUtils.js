@@ -12,7 +12,6 @@ export function saveCart(cart) {
   }
 }
 
-
 // ✅ Format Price Function
 export function formatPrice(price) {
   if (typeof price !== 'number' || isNaN(price)) {
@@ -79,4 +78,17 @@ export function debounce(func, delay) {
     clearTimeout(timeout);
     timeout = setTimeout(() => func.apply(this, args), delay);
   };
+}
+
+export function resetShippingMethod() {
+  console.log("🚀 Resetting shipping method and cost...");
+  
+  sessionStorage.setItem("shippingMethod", "pickup");
+  localStorage.setItem("shippingMethod", "pickup");
+
+  sessionStorage.setItem("shippingCost", "0");
+  localStorage.setItem("shippingCost", "0");
+
+  console.log("📦 Shipping Method Reset: pickup");
+  console.log("🚚 Shipping Cost Reset: ₦0");
 }

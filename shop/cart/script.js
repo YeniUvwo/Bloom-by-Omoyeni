@@ -1,6 +1,15 @@
-import { getCart, saveCart} from '/../assets/js/cartUtils.js';
+import { getCart, saveCart } from '/../assets/js/cartUtils.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+      // Load and display cart items
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      if (cart.length > 0) {
+          displayCartItems(cart);
+      } else {
+          // Display a message if the cart is empty
+          document.getElementById("cart-items").innerHTML = "<p>Your cart is empty.</p>";
+      }
+      
   displayCartItems();
   setupShippingSelection();
 });
@@ -104,20 +113,32 @@ document.addEventListener('click', (event) => {
 function setupShippingSelection() {
   document.querySelectorAll('.location-option input[type="radio"]').forEach(radio => {
     radio.addEventListener('change', () => {
-        const strongElement = radio.closest('.location-option')?.querySelector('strong');
-        
-        let selectedShipping = 0; 
-        if (strongElement) {
-            selectedShipping = parseInt(strongElement.textContent.replace(/[^\d]/g, ''), 10);
-        }
+      const shippingText = radio.closest('.location-option').querySelector('p').textContent.toLowerCase();
+      const strongElement = radio.closest('.location-option')?.querySelector('strong');
+      
+      let selectedShipping = 0;
+      let shippingMethod = "delivery"; // Default is delivery
 
-        const subtotalElement = document.getElementById('subtotal');
-        if (!subtotalElement) return; 
+      if (shippingText.includes("pickup")) {
+        shippingMethod = "pickup";
+        selectedShipping = 0;
+      } else if (strongElement) {
+        selectedShipping = parseInt(strongElement.textContent.replace(/[^\d]/g, ''), 10);
+      }
 
-        const subtotal = parseInt(subtotalElement.textContent.replace(/[^\d]/g, ''), 10);
-        const shippingCost = subtotal >= 100000 ? 0 : selectedShipping;
+      // Store shipping method and cost in sessionStorage
+      sessionStorage.setItem("shippingMethod", shippingMethod);
+      sessionStorage.setItem("shippingCost", selectedShipping);
 
-        updateTotalAmount(subtotal, shippingCost);
+      console.log("🚚 Shipping method and cost updated:", shippingMethod, selectedShipping);
+
+      const subtotalElement = document.getElementById('subtotal');
+      if (!subtotalElement) return;
+
+      const subtotal = parseInt(subtotalElement.textContent.replace(/[^\d]/g, ''), 10);
+      const shippingCost = subtotal >= 100000 ? 0 : selectedShipping;
+
+      updateTotalAmount(subtotal, shippingCost);
     });
   });
 }
@@ -125,7 +146,7 @@ function setupShippingSelection() {
 // ✅ Update Total Amount (Subtotal + Shipping)
 function updateTotalAmount(subtotal, shipping = 0) {
   const totalAmountElement = document.getElementById('total-amount');
-  const totalAmountContainer = totalAmountElement.closest('.total-amount-container'); // Adjust if needed
+  const totalAmountContainer = totalAmountElement.closest('.total-amount-container');
   const shippingContainer = document.querySelector('.shipping-container');
 
   totalAmountElement.textContent = (subtotal + shipping).toLocaleString('en-NG');
@@ -151,10 +172,11 @@ function updateTotalAmount(subtotal, shipping = 0) {
   }
 }
 
+// ✅ Get Selected Shipping Cost
 function getSelectedShipping() {
   const selectedOption = document.querySelector('.location-option input[type="radio"]:checked');
 
-  if (!selectedOption) return null;
+  if (!selectedOption) return 0;
 
   const shippingText = selectedOption.closest('.location-option').querySelector('strong').textContent.trim().toLowerCase();
 
@@ -165,71 +187,16 @@ function getSelectedShipping() {
   return parseInt(shippingText.replace(/[^\d]/g, ''), 10);
 }
 
-
-document.addEventListener("DOMContentLoaded", function () {
-  const checkoutButton = document.querySelector(".checkout-button");
-  const shippingOptions = document.querySelectorAll(".location-option input[type='radio']");
-  const subtotalElement = document.getElementById("subtotal");
-  const cartSummaryContainer = document.querySelector(".cart-summary-container");
-
-  // Create warning message element
-  const warningMessage = document.createElement("p");
-  warningMessage.classList.add("checkout-warning");
-  warningMessage.textContent = "Please select a delivery option before proceeding to checkout.";
-  warningMessage.style.display = "none"; // Hide initially
-  cartSummaryContainer.appendChild(warningMessage); // Add warning below checkout button
-
-  function updateCheckoutButton() {
-    const subtotal = parseInt(subtotalElement.textContent.replace(/[^\d]/g, ""), 10);
-    const selectedOption = document.querySelector(".location-option input[type='radio']:checked");
-
-    if (subtotal >= 100000) {
-      // ✅ If free delivery applies, enable checkout & hide warning
-      checkoutButton.classList.remove("disabled");
-      checkoutButton.style.pointerEvents = "auto";
-      warningMessage.style.display = "none"; // Hide warning
-    } else if (selectedOption) {
-      // ✅ If user selects a delivery option, enable checkout
-      checkoutButton.classList.remove("disabled");
-      checkoutButton.style.pointerEvents = "auto";
-      warningMessage.style.display = "none"; // Hide warning
-    } else {
-      // ❌ If subtotal is below 100k & no delivery selected, show warning
-      checkoutButton.classList.add("disabled");
-      checkoutButton.style.pointerEvents = "none";
-      warningMessage.style.display = "block"; // Show warning
-    }
-  }
-
-  // Disable checkout initially (only if subtotal is below 100k)
-  updateCheckoutButton();
-
-  // Listen for changes in shipping options
-  shippingOptions.forEach(option => {
-    option.addEventListener("change", updateCheckoutButton);
-  });
-
-  // Prevent checkout if no shipping option is selected and free delivery is not applied
-  checkoutButton.addEventListener("click", (event) => {
-    const subtotal = parseInt(subtotalElement.textContent.replace(/[^\d]/g, ""), 10);
-    const selectedOption = document.querySelector(".location-option input[type='radio']:checked");
-
-    if (subtotal < 100000 && !selectedOption) {
-      event.preventDefault(); // Stop navigation
-      warningMessage.style.display = "block"; // Show warning
-    }
-  });
-});
-
-document.querySelector(".checkout-button").addEventListener("click", function(event) {
+// ✅ Handle Checkout Button Click
+document.querySelector(".checkout-button").addEventListener("click", function (event) {
   const cart = getCart();
   const subtotal = parseInt(document.getElementById("subtotal").textContent.replace(/[^\d]/g, ""), 10);
   const selectedOption = document.querySelector(".location-option input[type='radio']:checked");
 
   if (!selectedOption && subtotal < 100000) {
-      event.preventDefault(); 
-      document.getElementById("error-message").textContent = "Please select a shipping option before proceeding.";
-      return;
+    event.preventDefault();
+    document.getElementById("error-message").textContent = "Please select a shipping option before proceeding.";
+    return;
   }
 
   let shippingCost = 0;
@@ -247,30 +214,21 @@ document.querySelector(".checkout-button").addEventListener("click", function(ev
 
   const totalAmount = subtotal + shippingCost;
 
+  // Store data in sessionStorage
   sessionStorage.setItem("cart", JSON.stringify(cart));
   sessionStorage.setItem("subtotal", subtotal);
   sessionStorage.setItem("shippingCost", shippingCost);
   sessionStorage.setItem("totalAmount", totalAmount);
   sessionStorage.setItem("pickup", pickupSelected ? "true" : "false");
+  sessionStorage.setItem("shippingMethod", pickupSelected ? "pickup" : "delivery");
 
   console.log("🚀 Storing data before checkout:");
   console.log("Cart:", sessionStorage.getItem("cart"));
   console.log("Pickup Selected:", sessionStorage.getItem("pickup"));
+  console.log("Shipping Method:", sessionStorage.getItem("shippingMethod"));
+  console.log("Shipping Cost:", sessionStorage.getItem("shippingCost"));
 
   setTimeout(() => {
     window.location.href = "../checkout/index.html";
   }, 300);
 });
-
-function removeFromCart(index) {
-  let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
-
-  cart.splice(index, 1); 
-
-  sessionStorage.setItem("cart", JSON.stringify(cart)); 
-
-  updateCartUI();
-}
-
-console.log(sessionStorage.getItem("cart"));
-console.log(sessionStorage.getItem("pickup"));
