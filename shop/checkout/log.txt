@@ -1,0 +1,2334 @@
+Paystack Full Response: Array
+(
+    [status] => 1
+    [message] => Verification successful
+    [data] => Array
+        (
+            [id] => 4807497350
+            [domain] => test
+            [status] => success
+            [reference] => 923392_1742825460413
+            [receipt_number] => 
+            [amount] => 7700000
+            [message] => 
+            [gateway_response] => Successful
+            [paid_at] => 2025-03-24T14:11:08.000Z
+            [created_at] => 2025-03-24T14:11:05.000Z
+            [channel] => card
+            [currency] => NGN
+            [ip_address] => 105.112.204.201
+            [metadata] => Array
+                (
+                    [custom_fields] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [display_name] => User ID
+                                    [variable_name] => userId
+                                    [value] => 923392
+                                )
+
+                            [1] => Array
+                                (
+                                    [display_name] => First Name
+                                    [variable_name] => firstName
+                                    [value] => Omoyeni
+                                )
+
+                            [2] => Array
+                                (
+                                    [display_name] => Last Name
+                                    [variable_name] => lastName
+                                    [value] => Ogunleye-Uvwo
+                                )
+
+                            [3] => Array
+                                (
+                                    [display_name] => Phone
+                                    [variable_name] => phone
+                                    [value] => 08075114643
+                                )
+
+                            [4] => Array
+                                (
+                                    [display_name] => Address
+                                    [variable_name] => address
+                                    [value] => Plot 596a adekunle adebola afun
+                                )
+
+                        )
+
+                    [referrer] => http://127.0.0.1:5500/shop/checkout/index.html
+                )
+
+            [log] => Array
+                (
+                    [start_time] => 1742825466
+                    [time_spent] => 4
+                    [attempts] => 1
+                    [errors] => 0
+                    [success] => 1
+                    [mobile] => 
+                    [input] => Array
+                        (
+                        )
+
+                    [history] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => action
+                                    [message] => Attempted to pay with card
+                                    [time] => 2
+                                )
+
+                            [1] => Array
+                                (
+                                    [type] => success
+                                    [message] => Successfully paid with card
+                                    [time] => 4
+                                )
+
+                        )
+
+                )
+
+            [fees] => 125500
+            [fees_split] => 
+            [authorization] => Array
+                (
+                    [authorization_code] => AUTH_w3yt908jx7
+                    [bin] => 408408
+                    [last4] => 4081
+                    [exp_month] => 12
+                    [exp_year] => 2030
+                    [channel] => card
+                    [card_type] => visa 
+                    [bank] => TEST BANK
+                    [country_code] => NG
+                    [brand] => visa
+                    [reusable] => 1
+                    [signature] => SIG_uNatqwNBDsEOZdTGyOdk
+                    [account_name] => 
+                    [receiver_bank_account_number] => 
+                    [receiver_bank] => 
+                )
+
+            [customer] => Array
+                (
+                    [id] => 234217933
+                    [first_name] => 
+                    [last_name] => 
+                    [email] => omoyenney@gmail.com
+                    [customer_code] => CUS_omaffahbsnu5g81
+                    [phone] => 
+                    [metadata] => 
+                    [risk_action] => default
+                    [international_format_phone] => 
+                )
+
+            [plan] => 
+            [split] => Array
+                (
+                )
+
+            [order_id] => 
+            [paidAt] => 2025-03-24T14:11:08.000Z
+            [createdAt] => 2025-03-24T14:11:05.000Z
+            [requested_amount] => 7700000
+            [pos_transaction_data] => 
+            [source] => 
+            [fees_breakdown] => 
+            [connect] => 
+            [transaction_date] => 2025-03-24T14:11:05.000Z
+            [plan_object] => Array
+                (
+                )
+
+            [subaccount] => Array
+                (
+                )
+
+        )
+
+)
+
+Order Inserted Successfully: Reference = 923392_1742825460413 | Status = pending
+Paystack Full Response: Array
+(
+    [status] => 1
+    [message] => Verification successful
+    [data] => Array
+        (
+            [id] => 4807510830
+            [domain] => test
+            [status] => success
+            [reference] => 319671_1742825880380
+            [receipt_number] => 
+            [amount] => 6600000
+            [message] => 
+            [gateway_response] => Successful
+            [paid_at] => 2025-03-24T14:18:08.000Z
+            [created_at] => 2025-03-24T14:18:05.000Z
+            [channel] => card
+            [currency] => NGN
+            [ip_address] => 105.112.204.201
+            [metadata] => Array
+                (
+                    [custom_fields] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [display_name] => User ID
+                                    [variable_name] => userId
+                                    [value] => 319671
+                                )
+
+                            [1] => Array
+                                (
+                                    [display_name] => First Name
+                                    [variable_name] => firstName
+                                    [value] => Omoyeni
+                                )
+
+                            [2] => Array
+                                (
+                                    [display_name] => Last Name
+                                    [variable_name] => lastName
+                                    [value] => Ogunleye-Uvwo
+                                )
+
+                            [3] => Array
+                                (
+                                    [display_name] => Phone
+                                    [variable_name] => phone
+                                    [value] => 08075114643
+                                )
+
+                            [4] => Array
+                                (
+                                    [display_name] => Address
+                                    [variable_name] => address
+                                    [value] => Plot 596a adekunle adebola afun
+                                )
+
+                        )
+
+                    [referrer] => http://127.0.0.1:5500/shop/checkout/index.html
+                )
+
+            [log] => Array
+                (
+                    [start_time] => 1742825885
+                    [time_spent] => 4
+                    [attempts] => 1
+                    [errors] => 0
+                    [success] => 1
+                    [mobile] => 
+                    [input] => Array
+                        (
+                        )
+
+                    [history] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => action
+                                    [message] => Attempted to pay with card
+                                    [time] => 3
+                                )
+
+                            [1] => Array
+                                (
+                                    [type] => success
+                                    [message] => Successfully paid with card
+                                    [time] => 4
+                                )
+
+                        )
+
+                )
+
+            [fees] => 109000
+            [fees_split] => 
+            [authorization] => Array
+                (
+                    [authorization_code] => AUTH_f6627j3wt8
+                    [bin] => 408408
+                    [last4] => 4081
+                    [exp_month] => 12
+                    [exp_year] => 2030
+                    [channel] => card
+                    [card_type] => visa 
+                    [bank] => TEST BANK
+                    [country_code] => NG
+                    [brand] => visa
+                    [reusable] => 1
+                    [signature] => SIG_uNatqwNBDsEOZdTGyOdk
+                    [account_name] => 
+                    [receiver_bank_account_number] => 
+                    [receiver_bank] => 
+                )
+
+            [customer] => Array
+                (
+                    [id] => 234217933
+                    [first_name] => 
+                    [last_name] => 
+                    [email] => omoyenney@gmail.com
+                    [customer_code] => CUS_omaffahbsnu5g81
+                    [phone] => 
+                    [metadata] => 
+                    [risk_action] => default
+                    [international_format_phone] => 
+                )
+
+            [plan] => 
+            [split] => Array
+                (
+                )
+
+            [order_id] => 
+            [paidAt] => 2025-03-24T14:18:08.000Z
+            [createdAt] => 2025-03-24T14:18:05.000Z
+            [requested_amount] => 6600000
+            [pos_transaction_data] => 
+            [source] => 
+            [fees_breakdown] => 
+            [connect] => 
+            [transaction_date] => 2025-03-24T14:18:05.000Z
+            [plan_object] => Array
+                (
+                )
+
+            [subaccount] => Array
+                (
+                )
+
+        )
+
+)
+
+Order Inserted Successfully: Reference = 319671_1742825880380 | Status = pending
+Paystack Full Response: Array
+(
+    [status] => 1
+    [message] => Verification successful
+    [data] => Array
+        (
+            [id] => 4826214735
+            [domain] => test
+            [status] => success
+            [reference] => 129067_1743332715761
+            [receipt_number] => 
+            [amount] => 6600000
+            [message] => 
+            [gateway_response] => Successful
+            [paid_at] => 2025-03-30T11:05:29.000Z
+            [created_at] => 2025-03-30T11:05:21.000Z
+            [channel] => card
+            [currency] => NGN
+            [ip_address] => 105.115.1.48
+            [metadata] => Array
+                (
+                    [custom_fields] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [display_name] => User ID
+                                    [variable_name] => userId
+                                    [value] => 129067
+                                )
+
+                            [1] => Array
+                                (
+                                    [display_name] => First Name
+                                    [variable_name] => firstName
+                                    [value] => Yeni
+                                )
+
+                            [2] => Array
+                                (
+                                    [display_name] => Last Name
+                                    [variable_name] => lastName
+                                    [value] => Uvwo
+                                )
+
+                            [3] => Array
+                                (
+                                    [display_name] => Phone
+                                    [variable_name] => phone
+                                    [value] => 08075114643
+                                )
+
+                            [4] => Array
+                                (
+                                    [display_name] => Address
+                                    [variable_name] => address
+                                    [value] => Inoyo haven estate
+                                )
+
+                        )
+
+                    [referrer] => http://127.0.0.1:5500/shop/checkout/index.html
+                )
+
+            [log] => Array
+                (
+                    [start_time] => 1743332721
+                    [time_spent] => 2
+                    [attempts] => 1
+                    [errors] => 0
+                    [success] => 
+                    [mobile] => 
+                    [input] => Array
+                        (
+                        )
+
+                    [history] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => action
+                                    [message] => Attempted to pay with card
+                                    [time] => 2
+                                )
+
+                        )
+
+                )
+
+            [fees] => 109000
+            [fees_split] => 
+            [authorization] => Array
+                (
+                    [authorization_code] => AUTH_zfnve0z832
+                    [bin] => 408408
+                    [last4] => 4081
+                    [exp_month] => 12
+                    [exp_year] => 2030
+                    [channel] => card
+                    [card_type] => visa 
+                    [bank] => TEST BANK
+                    [country_code] => NG
+                    [brand] => visa
+                    [reusable] => 1
+                    [signature] => SIG_uNatqwNBDsEOZdTGyOdk
+                    [account_name] => 
+                    [receiver_bank_account_number] => 
+                    [receiver_bank] => 
+                )
+
+            [customer] => Array
+                (
+                    [id] => 234217933
+                    [first_name] => 
+                    [last_name] => 
+                    [email] => omoyenney@gmail.com
+                    [customer_code] => CUS_omaffahbsnu5g81
+                    [phone] => 
+                    [metadata] => 
+                    [risk_action] => default
+                    [international_format_phone] => 
+                )
+
+            [plan] => 
+            [split] => Array
+                (
+                )
+
+            [order_id] => 
+            [paidAt] => 2025-03-30T11:05:29.000Z
+            [createdAt] => 2025-03-30T11:05:21.000Z
+            [requested_amount] => 6600000
+            [pos_transaction_data] => 
+            [source] => 
+            [fees_breakdown] => 
+            [connect] => 
+            [transaction_date] => 2025-03-30T11:05:21.000Z
+            [plan_object] => Array
+                (
+                )
+
+            [subaccount] => Array
+                (
+                )
+
+        )
+
+)
+
+Order Inserted Successfully: Reference = 129067_1743332715761 | Status = pending
+Paystack Full Response: Array
+(
+    [status] => 1
+    [message] => Verification successful
+    [data] => Array
+        (
+            [id] => 4826240760
+            [domain] => test
+            [status] => success
+            [reference] => 622751_1743333128420
+            [receipt_number] => 
+            [amount] => 6600000
+            [message] => 
+            [gateway_response] => Successful
+            [paid_at] => 2025-03-30T11:12:15.000Z
+            [created_at] => 2025-03-30T11:12:12.000Z
+            [channel] => card
+            [currency] => NGN
+            [ip_address] => 105.115.1.48
+            [metadata] => Array
+                (
+                    [custom_fields] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [display_name] => User ID
+                                    [variable_name] => userId
+                                    [value] => 622751
+                                )
+
+                            [1] => Array
+                                (
+                                    [display_name] => First Name
+                                    [variable_name] => firstName
+                                    [value] => Yeni
+                                )
+
+                            [2] => Array
+                                (
+                                    [display_name] => Last Name
+                                    [variable_name] => lastName
+                                    [value] => Uvwo
+                                )
+
+                            [3] => Array
+                                (
+                                    [display_name] => Phone
+                                    [variable_name] => phone
+                                    [value] => 08075114643
+                                )
+
+                            [4] => Array
+                                (
+                                    [display_name] => Address
+                                    [variable_name] => address
+                                    [value] => Inoyo haven estate
+                                )
+
+                        )
+
+                    [referrer] => http://127.0.0.1:5500/shop/checkout/index.html
+                )
+
+            [log] => Array
+                (
+                    [start_time] => 1743333130
+                    [time_spent] => 5
+                    [attempts] => 1
+                    [errors] => 0
+                    [success] => 1
+                    [mobile] => 
+                    [input] => Array
+                        (
+                        )
+
+                    [history] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => action
+                                    [message] => Attempted to pay with card
+                                    [time] => 3
+                                )
+
+                            [1] => Array
+                                (
+                                    [type] => success
+                                    [message] => Successfully paid with card
+                                    [time] => 5
+                                )
+
+                        )
+
+                )
+
+            [fees] => 109000
+            [fees_split] => 
+            [authorization] => Array
+                (
+                    [authorization_code] => AUTH_1yxy0ncm0o
+                    [bin] => 408408
+                    [last4] => 4081
+                    [exp_month] => 12
+                    [exp_year] => 2030
+                    [channel] => card
+                    [card_type] => visa 
+                    [bank] => TEST BANK
+                    [country_code] => NG
+                    [brand] => visa
+                    [reusable] => 1
+                    [signature] => SIG_uNatqwNBDsEOZdTGyOdk
+                    [account_name] => 
+                    [receiver_bank_account_number] => 
+                    [receiver_bank] => 
+                )
+
+            [customer] => Array
+                (
+                    [id] => 234217933
+                    [first_name] => 
+                    [last_name] => 
+                    [email] => omoyenney@gmail.com
+                    [customer_code] => CUS_omaffahbsnu5g81
+                    [phone] => 
+                    [metadata] => 
+                    [risk_action] => default
+                    [international_format_phone] => 
+                )
+
+            [plan] => 
+            [split] => Array
+                (
+                )
+
+            [order_id] => 
+            [paidAt] => 2025-03-30T11:12:15.000Z
+            [createdAt] => 2025-03-30T11:12:12.000Z
+            [requested_amount] => 6600000
+            [pos_transaction_data] => 
+            [source] => 
+            [fees_breakdown] => 
+            [connect] => 
+            [transaction_date] => 2025-03-30T11:12:12.000Z
+            [plan_object] => Array
+                (
+                )
+
+            [subaccount] => Array
+                (
+                )
+
+        )
+
+)
+
+Order Inserted Successfully: Reference = 622751_1743333128420 | Status = pending
+Paystack Full Response: Array
+(
+    [status] => 1
+    [message] => Verification successful
+    [data] => Array
+        (
+            [id] => 4826263729
+            [domain] => test
+            [status] => success
+            [reference] => 725157_1743333507136
+            [receipt_number] => 
+            [amount] => 6600000
+            [message] => 
+            [gateway_response] => Successful
+            [paid_at] => 2025-03-30T11:18:37.000Z
+            [created_at] => 2025-03-30T11:18:33.000Z
+            [channel] => card
+            [currency] => NGN
+            [ip_address] => 105.115.1.48
+            [metadata] => Array
+                (
+                    [custom_fields] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [display_name] => User ID
+                                    [variable_name] => userId
+                                    [value] => 725157
+                                )
+
+                            [1] => Array
+                                (
+                                    [display_name] => First Name
+                                    [variable_name] => firstName
+                                    [value] => Yeni
+                                )
+
+                            [2] => Array
+                                (
+                                    [display_name] => Last Name
+                                    [variable_name] => lastName
+                                    [value] => Uvwo
+                                )
+
+                            [3] => Array
+                                (
+                                    [display_name] => Phone
+                                    [variable_name] => phone
+                                    [value] => 08075114643
+                                )
+
+                            [4] => Array
+                                (
+                                    [display_name] => Address
+                                    [variable_name] => address
+                                    [value] => Inoyo haven estate
+                                )
+
+                        )
+
+                    [referrer] => http://127.0.0.1:5500/shop/checkout/index.html
+                )
+
+            [log] => Array
+                (
+                    [start_time] => 1743333513
+                    [time_spent] => 3
+                    [attempts] => 1
+                    [errors] => 0
+                    [success] => 1
+                    [mobile] => 
+                    [input] => Array
+                        (
+                        )
+
+                    [history] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => action
+                                    [message] => Attempted to pay with card
+                                    [time] => 2
+                                )
+
+                            [1] => Array
+                                (
+                                    [type] => success
+                                    [message] => Successfully paid with card
+                                    [time] => 3
+                                )
+
+                        )
+
+                )
+
+            [fees] => 109000
+            [fees_split] => 
+            [authorization] => Array
+                (
+                    [authorization_code] => AUTH_13a7zq9jf2
+                    [bin] => 408408
+                    [last4] => 4081
+                    [exp_month] => 12
+                    [exp_year] => 2030
+                    [channel] => card
+                    [card_type] => visa 
+                    [bank] => TEST BANK
+                    [country_code] => NG
+                    [brand] => visa
+                    [reusable] => 1
+                    [signature] => SIG_uNatqwNBDsEOZdTGyOdk
+                    [account_name] => 
+                    [receiver_bank_account_number] => 
+                    [receiver_bank] => 
+                )
+
+            [customer] => Array
+                (
+                    [id] => 234217933
+                    [first_name] => 
+                    [last_name] => 
+                    [email] => omoyenney@gmail.com
+                    [customer_code] => CUS_omaffahbsnu5g81
+                    [phone] => 
+                    [metadata] => 
+                    [risk_action] => default
+                    [international_format_phone] => 
+                )
+
+            [plan] => 
+            [split] => Array
+                (
+                )
+
+            [order_id] => 
+            [paidAt] => 2025-03-30T11:18:37.000Z
+            [createdAt] => 2025-03-30T11:18:33.000Z
+            [requested_amount] => 6600000
+            [pos_transaction_data] => 
+            [source] => 
+            [fees_breakdown] => 
+            [connect] => 
+            [transaction_date] => 2025-03-30T11:18:33.000Z
+            [plan_object] => Array
+                (
+                )
+
+            [subaccount] => Array
+                (
+                )
+
+        )
+
+)
+
+Order Inserted Successfully: Reference = 725157_1743333507136 | Status = pending
+Paystack Full Response: Array
+(
+    [status] => 1
+    [message] => Verification successful
+    [data] => Array
+        (
+            [id] => 4826270618
+            [domain] => test
+            [status] => success
+            [reference] => 863515_1743333628113
+            [receipt_number] => 
+            [amount] => 6600000
+            [message] => 
+            [gateway_response] => Successful
+            [paid_at] => 2025-03-30T11:20:36.000Z
+            [created_at] => 2025-03-30T11:20:33.000Z
+            [channel] => card
+            [currency] => NGN
+            [ip_address] => 105.115.1.48
+            [metadata] => Array
+                (
+                    [custom_fields] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [display_name] => User ID
+                                    [variable_name] => userId
+                                    [value] => 863515
+                                )
+
+                            [1] => Array
+                                (
+                                    [display_name] => First Name
+                                    [variable_name] => firstName
+                                    [value] => Yeni
+                                )
+
+                            [2] => Array
+                                (
+                                    [display_name] => Last Name
+                                    [variable_name] => lastName
+                                    [value] => Uvwo
+                                )
+
+                            [3] => Array
+                                (
+                                    [display_name] => Phone
+                                    [variable_name] => phone
+                                    [value] => 08075114643
+                                )
+
+                            [4] => Array
+                                (
+                                    [display_name] => Address
+                                    [variable_name] => address
+                                    [value] => Inoyo haven estate
+                                )
+
+                        )
+
+                    [referrer] => http://127.0.0.1:5500/shop/checkout/index.html
+                )
+
+            [log] => Array
+                (
+                    [start_time] => 1743333632
+                    [time_spent] => 4
+                    [attempts] => 1
+                    [errors] => 0
+                    [success] => 1
+                    [mobile] => 
+                    [input] => Array
+                        (
+                        )
+
+                    [history] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => action
+                                    [message] => Attempted to pay with card
+                                    [time] => 2
+                                )
+
+                            [1] => Array
+                                (
+                                    [type] => success
+                                    [message] => Successfully paid with card
+                                    [time] => 4
+                                )
+
+                        )
+
+                )
+
+            [fees] => 109000
+            [fees_split] => 
+            [authorization] => Array
+                (
+                    [authorization_code] => AUTH_fobpebtoh0
+                    [bin] => 408408
+                    [last4] => 4081
+                    [exp_month] => 12
+                    [exp_year] => 2030
+                    [channel] => card
+                    [card_type] => visa 
+                    [bank] => TEST BANK
+                    [country_code] => NG
+                    [brand] => visa
+                    [reusable] => 1
+                    [signature] => SIG_uNatqwNBDsEOZdTGyOdk
+                    [account_name] => 
+                    [receiver_bank_account_number] => 
+                    [receiver_bank] => 
+                )
+
+            [customer] => Array
+                (
+                    [id] => 234217933
+                    [first_name] => 
+                    [last_name] => 
+                    [email] => omoyenney@gmail.com
+                    [customer_code] => CUS_omaffahbsnu5g81
+                    [phone] => 
+                    [metadata] => 
+                    [risk_action] => default
+                    [international_format_phone] => 
+                )
+
+            [plan] => 
+            [split] => Array
+                (
+                )
+
+            [order_id] => 
+            [paidAt] => 2025-03-30T11:20:36.000Z
+            [createdAt] => 2025-03-30T11:20:33.000Z
+            [requested_amount] => 6600000
+            [pos_transaction_data] => 
+            [source] => 
+            [fees_breakdown] => 
+            [connect] => 
+            [transaction_date] => 2025-03-30T11:20:33.000Z
+            [plan_object] => Array
+                (
+                )
+
+            [subaccount] => Array
+                (
+                )
+
+        )
+
+)
+
+Order Inserted Successfully: Reference = 863515_1743333628113 | Status = pending
+Paystack Full Response: Array
+(
+    [status] => 1
+    [message] => Verification successful
+    [data] => Array
+        (
+            [id] => 4826336681
+            [domain] => test
+            [status] => success
+            [reference] => 185381_1743334742333
+            [receipt_number] => 
+            [amount] => 6600000
+            [message] => 
+            [gateway_response] => Successful
+            [paid_at] => 2025-03-30T11:39:10.000Z
+            [created_at] => 2025-03-30T11:39:07.000Z
+            [channel] => card
+            [currency] => NGN
+            [ip_address] => 129.205.124.243
+            [metadata] => Array
+                (
+                    [custom_fields] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [display_name] => User ID
+                                    [variable_name] => userId
+                                    [value] => 185381
+                                )
+
+                            [1] => Array
+                                (
+                                    [display_name] => First Name
+                                    [variable_name] => firstName
+                                    [value] => Yeni
+                                )
+
+                            [2] => Array
+                                (
+                                    [display_name] => Last Name
+                                    [variable_name] => lastName
+                                    [value] => Uvwo
+                                )
+
+                            [3] => Array
+                                (
+                                    [display_name] => Phone
+                                    [variable_name] => phone
+                                    [value] => 08075114643
+                                )
+
+                            [4] => Array
+                                (
+                                    [display_name] => Address
+                                    [variable_name] => address
+                                    [value] => Inoyo haven estate
+                                )
+
+                        )
+
+                    [referrer] => http://127.0.0.1:5500/shop/checkout/index.html
+                )
+
+            [log] => Array
+                (
+                    [start_time] => 1743334745
+                    [time_spent] => 5
+                    [attempts] => 1
+                    [errors] => 0
+                    [success] => 1
+                    [mobile] => 
+                    [input] => Array
+                        (
+                        )
+
+                    [history] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => action
+                                    [message] => Attempted to pay with card
+                                    [time] => 3
+                                )
+
+                            [1] => Array
+                                (
+                                    [type] => success
+                                    [message] => Successfully paid with card
+                                    [time] => 5
+                                )
+
+                        )
+
+                )
+
+            [fees] => 109000
+            [fees_split] => 
+            [authorization] => Array
+                (
+                    [authorization_code] => AUTH_t9e1re74hx
+                    [bin] => 408408
+                    [last4] => 4081
+                    [exp_month] => 12
+                    [exp_year] => 2030
+                    [channel] => card
+                    [card_type] => visa 
+                    [bank] => TEST BANK
+                    [country_code] => NG
+                    [brand] => visa
+                    [reusable] => 1
+                    [signature] => SIG_uNatqwNBDsEOZdTGyOdk
+                    [account_name] => 
+                    [receiver_bank_account_number] => 
+                    [receiver_bank] => 
+                )
+
+            [customer] => Array
+                (
+                    [id] => 234217933
+                    [first_name] => 
+                    [last_name] => 
+                    [email] => omoyenney@gmail.com
+                    [customer_code] => CUS_omaffahbsnu5g81
+                    [phone] => 
+                    [metadata] => 
+                    [risk_action] => default
+                    [international_format_phone] => 
+                )
+
+            [plan] => 
+            [split] => Array
+                (
+                )
+
+            [order_id] => 
+            [paidAt] => 2025-03-30T11:39:10.000Z
+            [createdAt] => 2025-03-30T11:39:07.000Z
+            [requested_amount] => 6600000
+            [pos_transaction_data] => 
+            [source] => 
+            [fees_breakdown] => 
+            [connect] => 
+            [transaction_date] => 2025-03-30T11:39:07.000Z
+            [plan_object] => Array
+                (
+                )
+
+            [subaccount] => Array
+                (
+                )
+
+        )
+
+)
+
+Order Inserted Successfully: Reference = 185381_1743334742333 | Status = pending
+Paystack Full Response: Array
+(
+    [status] => 1
+    [message] => Verification successful
+    [data] => Array
+        (
+            [id] => 4826368747
+            [domain] => test
+            [status] => success
+            [reference] => 736022_1743335233783
+            [receipt_number] => 
+            [amount] => 6600000
+            [message] => 
+            [gateway_response] => Successful
+            [paid_at] => 2025-03-30T11:47:23.000Z
+            [created_at] => 2025-03-30T11:47:18.000Z
+            [channel] => card
+            [currency] => NGN
+            [ip_address] => 129.205.124.243
+            [metadata] => Array
+                (
+                    [custom_fields] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [display_name] => User ID
+                                    [variable_name] => userId
+                                    [value] => 736022
+                                )
+
+                            [1] => Array
+                                (
+                                    [display_name] => First Name
+                                    [variable_name] => firstName
+                                    [value] => Yeni
+                                )
+
+                            [2] => Array
+                                (
+                                    [display_name] => Last Name
+                                    [variable_name] => lastName
+                                    [value] => Uvwo
+                                )
+
+                            [3] => Array
+                                (
+                                    [display_name] => Phone
+                                    [variable_name] => phone
+                                    [value] => 08075114643
+                                )
+
+                            [4] => Array
+                                (
+                                    [display_name] => Address
+                                    [variable_name] => address
+                                    [value] => Inoyo haven estate
+                                )
+
+                        )
+
+                    [referrer] => http://127.0.0.1:5500/shop/checkout/index.html
+                )
+
+            [log] => Array
+                (
+                    [start_time] => 1743335236
+                    [time_spent] => 6
+                    [attempts] => 1
+                    [errors] => 0
+                    [success] => 1
+                    [mobile] => 
+                    [input] => Array
+                        (
+                        )
+
+                    [history] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => action
+                                    [message] => Attempted to pay with card
+                                    [time] => 5
+                                )
+
+                            [1] => Array
+                                (
+                                    [type] => success
+                                    [message] => Successfully paid with card
+                                    [time] => 6
+                                )
+
+                        )
+
+                )
+
+            [fees] => 109000
+            [fees_split] => 
+            [authorization] => Array
+                (
+                    [authorization_code] => AUTH_22oeuxz1xn
+                    [bin] => 408408
+                    [last4] => 4081
+                    [exp_month] => 12
+                    [exp_year] => 2030
+                    [channel] => card
+                    [card_type] => visa 
+                    [bank] => TEST BANK
+                    [country_code] => NG
+                    [brand] => visa
+                    [reusable] => 1
+                    [signature] => SIG_uNatqwNBDsEOZdTGyOdk
+                    [account_name] => 
+                    [receiver_bank_account_number] => 
+                    [receiver_bank] => 
+                )
+
+            [customer] => Array
+                (
+                    [id] => 234217933
+                    [first_name] => 
+                    [last_name] => 
+                    [email] => omoyenney@gmail.com
+                    [customer_code] => CUS_omaffahbsnu5g81
+                    [phone] => 
+                    [metadata] => 
+                    [risk_action] => default
+                    [international_format_phone] => 
+                )
+
+            [plan] => 
+            [split] => Array
+                (
+                )
+
+            [order_id] => 
+            [paidAt] => 2025-03-30T11:47:23.000Z
+            [createdAt] => 2025-03-30T11:47:18.000Z
+            [requested_amount] => 6600000
+            [pos_transaction_data] => 
+            [source] => 
+            [fees_breakdown] => 
+            [connect] => 
+            [transaction_date] => 2025-03-30T11:47:18.000Z
+            [plan_object] => Array
+                (
+                )
+
+            [subaccount] => Array
+                (
+                )
+
+        )
+
+)
+
+Order Inserted Successfully: Reference = 736022_1743335233783 | Status = pending
+Paystack Full Response: Array
+(
+    [status] => 1
+    [message] => Verification successful
+    [data] => Array
+        (
+            [id] => 4826395976
+            [domain] => test
+            [status] => success
+            [reference] => 546765_1743335621051
+            [receipt_number] => 
+            [amount] => 7250000
+            [message] => 
+            [gateway_response] => Successful
+            [paid_at] => 2025-03-30T11:53:48.000Z
+            [created_at] => 2025-03-30T11:53:45.000Z
+            [channel] => card
+            [currency] => NGN
+            [ip_address] => 129.205.124.243
+            [metadata] => Array
+                (
+                    [custom_fields] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [display_name] => User ID
+                                    [variable_name] => userId
+                                    [value] => 546765
+                                )
+
+                            [1] => Array
+                                (
+                                    [display_name] => First Name
+                                    [variable_name] => firstName
+                                    [value] => Yeni
+                                )
+
+                            [2] => Array
+                                (
+                                    [display_name] => Last Name
+                                    [variable_name] => lastName
+                                    [value] => Uvwo
+                                )
+
+                            [3] => Array
+                                (
+                                    [display_name] => Phone
+                                    [variable_name] => phone
+                                    [value] => 08075114643
+                                )
+
+                            [4] => Array
+                                (
+                                    [display_name] => Address
+                                    [variable_name] => address
+                                    [value] => Inoyo haven estate
+                                )
+
+                        )
+
+                    [referrer] => http://127.0.0.1:5500/shop/checkout/index.html
+                )
+
+            [log] => Array
+                (
+                    [start_time] => 1743335623
+                    [time_spent] => 5
+                    [attempts] => 1
+                    [errors] => 0
+                    [success] => 1
+                    [mobile] => 
+                    [input] => Array
+                        (
+                        )
+
+                    [history] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => action
+                                    [message] => Attempted to pay with card
+                                    [time] => 3
+                                )
+
+                            [1] => Array
+                                (
+                                    [type] => success
+                                    [message] => Successfully paid with card
+                                    [time] => 5
+                                )
+
+                        )
+
+                )
+
+            [fees] => 118750
+            [fees_split] => 
+            [authorization] => Array
+                (
+                    [authorization_code] => AUTH_u4x9vjm00t
+                    [bin] => 408408
+                    [last4] => 4081
+                    [exp_month] => 12
+                    [exp_year] => 2030
+                    [channel] => card
+                    [card_type] => visa 
+                    [bank] => TEST BANK
+                    [country_code] => NG
+                    [brand] => visa
+                    [reusable] => 1
+                    [signature] => SIG_uNatqwNBDsEOZdTGyOdk
+                    [account_name] => 
+                    [receiver_bank_account_number] => 
+                    [receiver_bank] => 
+                )
+
+            [customer] => Array
+                (
+                    [id] => 234217933
+                    [first_name] => 
+                    [last_name] => 
+                    [email] => omoyenney@gmail.com
+                    [customer_code] => CUS_omaffahbsnu5g81
+                    [phone] => 
+                    [metadata] => 
+                    [risk_action] => default
+                    [international_format_phone] => 
+                )
+
+            [plan] => 
+            [split] => Array
+                (
+                )
+
+            [order_id] => 
+            [paidAt] => 2025-03-30T11:53:48.000Z
+            [createdAt] => 2025-03-30T11:53:45.000Z
+            [requested_amount] => 7250000
+            [pos_transaction_data] => 
+            [source] => 
+            [fees_breakdown] => 
+            [connect] => 
+            [transaction_date] => 2025-03-30T11:53:45.000Z
+            [plan_object] => Array
+                (
+                )
+
+            [subaccount] => Array
+                (
+                )
+
+        )
+
+)
+
+Order Inserted Successfully: Reference = 546765_1743335621051 | Status = pending
+Paystack Full Response: Array
+(
+    [status] => 1
+    [message] => Verification successful
+    [data] => Array
+        (
+            [id] => 4826400833
+            [domain] => test
+            [status] => success
+            [reference] => 736476_1743335694931
+            [receipt_number] => 
+            [amount] => 7200000
+            [message] => 
+            [gateway_response] => Successful
+            [paid_at] => 2025-03-30T11:55:02.000Z
+            [created_at] => 2025-03-30T11:54:59.000Z
+            [channel] => card
+            [currency] => NGN
+            [ip_address] => 129.205.124.243
+            [metadata] => Array
+                (
+                    [custom_fields] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [display_name] => User ID
+                                    [variable_name] => userId
+                                    [value] => 736476
+                                )
+
+                            [1] => Array
+                                (
+                                    [display_name] => First Name
+                                    [variable_name] => firstName
+                                    [value] => Yeni
+                                )
+
+                            [2] => Array
+                                (
+                                    [display_name] => Last Name
+                                    [variable_name] => lastName
+                                    [value] => Uvwo
+                                )
+
+                            [3] => Array
+                                (
+                                    [display_name] => Phone
+                                    [variable_name] => phone
+                                    [value] => 08075114643
+                                )
+
+                            [4] => Array
+                                (
+                                    [display_name] => Address
+                                    [variable_name] => address
+                                    [value] => Inoyo haven estate
+                                )
+
+                        )
+
+                    [referrer] => http://127.0.0.1:5500/shop/checkout/index.html
+                )
+
+            [log] => Array
+                (
+                    [start_time] => 1743335697
+                    [time_spent] => 4
+                    [attempts] => 1
+                    [errors] => 0
+                    [success] => 1
+                    [mobile] => 
+                    [input] => Array
+                        (
+                        )
+
+                    [history] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => action
+                                    [message] => Attempted to pay with card
+                                    [time] => 3
+                                )
+
+                            [1] => Array
+                                (
+                                    [type] => success
+                                    [message] => Successfully paid with card
+                                    [time] => 4
+                                )
+
+                        )
+
+                )
+
+            [fees] => 118000
+            [fees_split] => 
+            [authorization] => Array
+                (
+                    [authorization_code] => AUTH_e1695tqsv7
+                    [bin] => 408408
+                    [last4] => 4081
+                    [exp_month] => 12
+                    [exp_year] => 2030
+                    [channel] => card
+                    [card_type] => visa 
+                    [bank] => TEST BANK
+                    [country_code] => NG
+                    [brand] => visa
+                    [reusable] => 1
+                    [signature] => SIG_uNatqwNBDsEOZdTGyOdk
+                    [account_name] => 
+                    [receiver_bank_account_number] => 
+                    [receiver_bank] => 
+                )
+
+            [customer] => Array
+                (
+                    [id] => 234217933
+                    [first_name] => 
+                    [last_name] => 
+                    [email] => omoyenney@gmail.com
+                    [customer_code] => CUS_omaffahbsnu5g81
+                    [phone] => 
+                    [metadata] => 
+                    [risk_action] => default
+                    [international_format_phone] => 
+                )
+
+            [plan] => 
+            [split] => Array
+                (
+                )
+
+            [order_id] => 
+            [paidAt] => 2025-03-30T11:55:02.000Z
+            [createdAt] => 2025-03-30T11:54:59.000Z
+            [requested_amount] => 7200000
+            [pos_transaction_data] => 
+            [source] => 
+            [fees_breakdown] => 
+            [connect] => 
+            [transaction_date] => 2025-03-30T11:54:59.000Z
+            [plan_object] => Array
+                (
+                )
+
+            [subaccount] => Array
+                (
+                )
+
+        )
+
+)
+
+Order Inserted Successfully: Reference = 736476_1743335694931 | Status = pending
+Paystack Full Response: Array
+(
+    [status] => 1
+    [message] => Verification successful
+    [data] => Array
+        (
+            [id] => 4829020738
+            [domain] => test
+            [status] => success
+            [reference] => 749033_1743415043762
+            [receipt_number] => 
+            [amount] => 6800000
+            [message] => 
+            [gateway_response] => Successful
+            [paid_at] => 2025-03-31T09:57:34.000Z
+            [created_at] => 2025-03-31T09:57:29.000Z
+            [channel] => card
+            [currency] => NGN
+            [ip_address] => 105.112.178.199
+            [metadata] => Array
+                (
+                    [custom_fields] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [display_name] => User ID
+                                    [variable_name] => userId
+                                    [value] => 749033
+                                )
+
+                            [1] => Array
+                                (
+                                    [display_name] => First Name
+                                    [variable_name] => firstName
+                                    [value] => Yeni
+                                )
+
+                            [2] => Array
+                                (
+                                    [display_name] => Last Name
+                                    [variable_name] => lastName
+                                    [value] => Uvwo
+                                )
+
+                            [3] => Array
+                                (
+                                    [display_name] => Phone
+                                    [variable_name] => phone
+                                    [value] => 08075114643
+                                )
+
+                            [4] => Array
+                                (
+                                    [display_name] => Address
+                                    [variable_name] => address
+                                    [value] => Inoyo haven estate
+                                )
+
+                        )
+
+                    [referrer] => http://127.0.0.1:5500/shop/checkout/index.html
+                )
+
+            [log] => Array
+                (
+                    [start_time] => 1743415047
+                    [time_spent] => 5
+                    [attempts] => 1
+                    [errors] => 0
+                    [success] => 1
+                    [mobile] => 
+                    [input] => Array
+                        (
+                        )
+
+                    [history] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => action
+                                    [message] => Attempted to pay with card
+                                    [time] => 4
+                                )
+
+                            [1] => Array
+                                (
+                                    [type] => success
+                                    [message] => Successfully paid with card
+                                    [time] => 5
+                                )
+
+                        )
+
+                )
+
+            [fees] => 112000
+            [fees_split] => 
+            [authorization] => Array
+                (
+                    [authorization_code] => AUTH_1296f3qiv2
+                    [bin] => 408408
+                    [last4] => 4081
+                    [exp_month] => 12
+                    [exp_year] => 2030
+                    [channel] => card
+                    [card_type] => visa 
+                    [bank] => TEST BANK
+                    [country_code] => NG
+                    [brand] => visa
+                    [reusable] => 1
+                    [signature] => SIG_uNatqwNBDsEOZdTGyOdk
+                    [account_name] => 
+                    [receiver_bank_account_number] => 
+                    [receiver_bank] => 
+                )
+
+            [customer] => Array
+                (
+                    [id] => 234217933
+                    [first_name] => 
+                    [last_name] => 
+                    [email] => omoyenney@gmail.com
+                    [customer_code] => CUS_omaffahbsnu5g81
+                    [phone] => 
+                    [metadata] => 
+                    [risk_action] => default
+                    [international_format_phone] => 
+                )
+
+            [plan] => 
+            [split] => Array
+                (
+                )
+
+            [order_id] => 
+            [paidAt] => 2025-03-31T09:57:34.000Z
+            [createdAt] => 2025-03-31T09:57:29.000Z
+            [requested_amount] => 6800000
+            [pos_transaction_data] => 
+            [source] => 
+            [fees_breakdown] => 
+            [connect] => 
+            [transaction_date] => 2025-03-31T09:57:29.000Z
+            [plan_object] => Array
+                (
+                )
+
+            [subaccount] => Array
+                (
+                )
+
+        )
+
+)
+
+Order Inserted Successfully: Reference = 749033_1743415043762 | Status = pending
+Paystack Full Response: Array
+(
+    [status] => 1
+    [message] => Verification successful
+    [data] => Array
+        (
+            [id] => 4829024122
+            [domain] => test
+            [status] => success
+            [reference] => 415356_1743415110405
+            [receipt_number] => 
+            [amount] => 6800000
+            [message] => 
+            [gateway_response] => Successful
+            [paid_at] => 2025-03-31T09:58:38.000Z
+            [created_at] => 2025-03-31T09:58:34.000Z
+            [channel] => card
+            [currency] => NGN
+            [ip_address] => 105.112.178.199
+            [metadata] => Array
+                (
+                    [custom_fields] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [display_name] => User ID
+                                    [variable_name] => userId
+                                    [value] => 415356
+                                )
+
+                            [1] => Array
+                                (
+                                    [display_name] => First Name
+                                    [variable_name] => firstName
+                                    [value] => Omoyeni
+                                )
+
+                            [2] => Array
+                                (
+                                    [display_name] => Last Name
+                                    [variable_name] => lastName
+                                    [value] => Ogunleye-Uvwo
+                                )
+
+                            [3] => Array
+                                (
+                                    [display_name] => Phone
+                                    [variable_name] => phone
+                                    [value] => 08075114643
+                                )
+
+                            [4] => Array
+                                (
+                                    [display_name] => Address
+                                    [variable_name] => address
+                                    [value] => Plot596 Adekunle Adebola Afun Avenue
+Omole Phase2
+                                )
+
+                        )
+
+                    [referrer] => http://127.0.0.1:5500/shop/checkout/index.html
+                )
+
+            [log] => Array
+                (
+                    [start_time] => 1743415112
+                    [time_spent] => 4
+                    [attempts] => 1
+                    [errors] => 0
+                    [success] => 1
+                    [mobile] => 
+                    [input] => Array
+                        (
+                        )
+
+                    [history] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => action
+                                    [message] => Attempted to pay with card
+                                    [time] => 3
+                                )
+
+                            [1] => Array
+                                (
+                                    [type] => success
+                                    [message] => Successfully paid with card
+                                    [time] => 4
+                                )
+
+                        )
+
+                )
+
+            [fees] => 112000
+            [fees_split] => 
+            [authorization] => Array
+                (
+                    [authorization_code] => AUTH_hw1hn0dpgu
+                    [bin] => 408408
+                    [last4] => 4081
+                    [exp_month] => 12
+                    [exp_year] => 2030
+                    [channel] => card
+                    [card_type] => visa 
+                    [bank] => TEST BANK
+                    [country_code] => NG
+                    [brand] => visa
+                    [reusable] => 1
+                    [signature] => SIG_uNatqwNBDsEOZdTGyOdk
+                    [account_name] => 
+                    [receiver_bank_account_number] => 
+                    [receiver_bank] => 
+                )
+
+            [customer] => Array
+                (
+                    [id] => 234217933
+                    [first_name] => 
+                    [last_name] => 
+                    [email] => omoyenney@gmail.com
+                    [customer_code] => CUS_omaffahbsnu5g81
+                    [phone] => 
+                    [metadata] => 
+                    [risk_action] => default
+                    [international_format_phone] => 
+                )
+
+            [plan] => 
+            [split] => Array
+                (
+                )
+
+            [order_id] => 
+            [paidAt] => 2025-03-31T09:58:38.000Z
+            [createdAt] => 2025-03-31T09:58:34.000Z
+            [requested_amount] => 6800000
+            [pos_transaction_data] => 
+            [source] => 
+            [fees_breakdown] => 
+            [connect] => 
+            [transaction_date] => 2025-03-31T09:58:34.000Z
+            [plan_object] => Array
+                (
+                )
+
+            [subaccount] => Array
+                (
+                )
+
+        )
+
+)
+
+Order Inserted Successfully: Reference = 415356_1743415110405 | Status = pending
+Paystack Full Response: Array
+(
+    [status] => 1
+    [message] => Verification successful
+    [data] => Array
+        (
+            [id] => 4830423704
+            [domain] => test
+            [status] => success
+            [reference] => 781762_1743450688100
+            [receipt_number] => 
+            [amount] => 6600000
+            [message] => 
+            [gateway_response] => Successful
+            [paid_at] => 2025-03-31T19:51:35.000Z
+            [created_at] => 2025-03-31T19:51:31.000Z
+            [channel] => card
+            [currency] => NGN
+            [ip_address] => 105.115.3.236
+            [metadata] => Array
+                (
+                    [custom_fields] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [display_name] => User ID
+                                    [variable_name] => userId
+                                    [value] => 781762
+                                )
+
+                            [1] => Array
+                                (
+                                    [display_name] => First Name
+                                    [variable_name] => firstName
+                                    [value] => omoyeni
+                                )
+
+                            [2] => Array
+                                (
+                                    [display_name] => Last Name
+                                    [variable_name] => lastName
+                                    [value] => ogunleye
+                                )
+
+                            [3] => Array
+                                (
+                                    [display_name] => Phone
+                                    [variable_name] => phone
+                                    [value] => 08075114643
+                                )
+
+                            [4] => Array
+                                (
+                                    [display_name] => Address
+                                    [variable_name] => address
+                                    [value] => inoyo haven
+                                )
+
+                        )
+
+                    [referrer] => http://127.0.0.1:5500/shop/checkout/index.html
+                )
+
+            [log] => Array
+                (
+                    [start_time] => 1743450692
+                    [time_spent] => 4
+                    [attempts] => 1
+                    [errors] => 0
+                    [success] => 1
+                    [mobile] => 
+                    [input] => Array
+                        (
+                        )
+
+                    [history] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => action
+                                    [message] => Attempted to pay with card
+                                    [time] => 3
+                                )
+
+                            [1] => Array
+                                (
+                                    [type] => success
+                                    [message] => Successfully paid with card
+                                    [time] => 4
+                                )
+
+                        )
+
+                )
+
+            [fees] => 109000
+            [fees_split] => 
+            [authorization] => Array
+                (
+                    [authorization_code] => AUTH_d9dg1mlcdg
+                    [bin] => 408408
+                    [last4] => 4081
+                    [exp_month] => 12
+                    [exp_year] => 2030
+                    [channel] => card
+                    [card_type] => visa 
+                    [bank] => TEST BANK
+                    [country_code] => NG
+                    [brand] => visa
+                    [reusable] => 1
+                    [signature] => SIG_uNatqwNBDsEOZdTGyOdk
+                    [account_name] => 
+                    [receiver_bank_account_number] => 
+                    [receiver_bank] => 
+                )
+
+            [customer] => Array
+                (
+                    [id] => 234217933
+                    [first_name] => 
+                    [last_name] => 
+                    [email] => omoyenney@gmail.com
+                    [customer_code] => CUS_omaffahbsnu5g81
+                    [phone] => 
+                    [metadata] => 
+                    [risk_action] => default
+                    [international_format_phone] => 
+                )
+
+            [plan] => 
+            [split] => Array
+                (
+                )
+
+            [order_id] => 
+            [paidAt] => 2025-03-31T19:51:35.000Z
+            [createdAt] => 2025-03-31T19:51:31.000Z
+            [requested_amount] => 6600000
+            [pos_transaction_data] => 
+            [source] => 
+            [fees_breakdown] => 
+            [connect] => 
+            [transaction_date] => 2025-03-31T19:51:31.000Z
+            [plan_object] => Array
+                (
+                )
+
+            [subaccount] => Array
+                (
+                )
+
+        )
+
+)
+
+Order Inserted Successfully: Reference = 781762_1743450688100 | Status = pending
+Paystack Full Response: Array
+(
+    [status] => 1
+    [message] => Verification successful
+    [data] => Array
+        (
+            [id] => 4830426830
+            [domain] => test
+            [status] => success
+            [reference] => 152540_1743450812041
+            [receipt_number] => 
+            [amount] => 6600000
+            [message] => 
+            [gateway_response] => Successful
+            [paid_at] => 2025-03-31T19:53:36.000Z
+            [created_at] => 2025-03-31T19:53:33.000Z
+            [channel] => card
+            [currency] => NGN
+            [ip_address] => 105.115.3.236
+            [metadata] => Array
+                (
+                    [custom_fields] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [display_name] => User ID
+                                    [variable_name] => userId
+                                    [value] => 152540
+                                )
+
+                            [1] => Array
+                                (
+                                    [display_name] => First Name
+                                    [variable_name] => firstName
+                                    [value] => Omoyeni
+                                )
+
+                            [2] => Array
+                                (
+                                    [display_name] => Last Name
+                                    [variable_name] => lastName
+                                    [value] => Ogunleye-Uvwo
+                                )
+
+                            [3] => Array
+                                (
+                                    [display_name] => Phone
+                                    [variable_name] => phone
+                                    [value] => 08075114643
+                                )
+
+                            [4] => Array
+                                (
+                                    [display_name] => Address
+                                    [variable_name] => address
+                                    [value] => Plot 596a adekunle adebola afun
+                                )
+
+                        )
+
+                    [referrer] => http://127.0.0.1:5500/shop/checkout/index.html
+                )
+
+            [log] => Array
+                (
+                    [start_time] => 1743450813
+                    [time_spent] => 4
+                    [attempts] => 1
+                    [errors] => 0
+                    [success] => 1
+                    [mobile] => 
+                    [input] => Array
+                        (
+                        )
+
+                    [history] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => action
+                                    [message] => Attempted to pay with card
+                                    [time] => 3
+                                )
+
+                            [1] => Array
+                                (
+                                    [type] => success
+                                    [message] => Successfully paid with card
+                                    [time] => 4
+                                )
+
+                        )
+
+                )
+
+            [fees] => 109000
+            [fees_split] => 
+            [authorization] => Array
+                (
+                    [authorization_code] => AUTH_yrm8dk2trr
+                    [bin] => 408408
+                    [last4] => 4081
+                    [exp_month] => 12
+                    [exp_year] => 2030
+                    [channel] => card
+                    [card_type] => visa 
+                    [bank] => TEST BANK
+                    [country_code] => NG
+                    [brand] => visa
+                    [reusable] => 1
+                    [signature] => SIG_uNatqwNBDsEOZdTGyOdk
+                    [account_name] => 
+                    [receiver_bank_account_number] => 
+                    [receiver_bank] => 
+                )
+
+            [customer] => Array
+                (
+                    [id] => 234217933
+                    [first_name] => 
+                    [last_name] => 
+                    [email] => omoyenney@gmail.com
+                    [customer_code] => CUS_omaffahbsnu5g81
+                    [phone] => 
+                    [metadata] => 
+                    [risk_action] => default
+                    [international_format_phone] => 
+                )
+
+            [plan] => 
+            [split] => Array
+                (
+                )
+
+            [order_id] => 
+            [paidAt] => 2025-03-31T19:53:36.000Z
+            [createdAt] => 2025-03-31T19:53:33.000Z
+            [requested_amount] => 6600000
+            [pos_transaction_data] => 
+            [source] => 
+            [fees_breakdown] => 
+            [connect] => 
+            [transaction_date] => 2025-03-31T19:53:33.000Z
+            [plan_object] => Array
+                (
+                )
+
+            [subaccount] => Array
+                (
+                )
+
+        )
+
+)
+
+Order Inserted Successfully: Reference = 152540_1743450812041 | Status = pending
+Paystack Full Response: Array
+(
+    [status] => 1
+    [message] => Verification successful
+    [data] => Array
+        (
+            [id] => 4830435011
+            [domain] => test
+            [status] => success
+            [reference] => 452219_1743451094726
+            [receipt_number] => 
+            [amount] => 7250000
+            [message] => 
+            [gateway_response] => Successful
+            [paid_at] => 2025-03-31T19:58:19.000Z
+            [created_at] => 2025-03-31T19:58:16.000Z
+            [channel] => card
+            [currency] => NGN
+            [ip_address] => 105.115.3.236
+            [metadata] => Array
+                (
+                    [custom_fields] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [display_name] => User ID
+                                    [variable_name] => userId
+                                    [value] => 452219
+                                )
+
+                            [1] => Array
+                                (
+                                    [display_name] => First Name
+                                    [variable_name] => firstName
+                                    [value] => Omoyeni
+                                )
+
+                            [2] => Array
+                                (
+                                    [display_name] => Last Name
+                                    [variable_name] => lastName
+                                    [value] => Ogunleye
+                                )
+
+                            [3] => Array
+                                (
+                                    [display_name] => Phone
+                                    [variable_name] => phone
+                                    [value] => 08055068691
+                                )
+
+                            [4] => Array
+                                (
+                                    [display_name] => Address
+                                    [variable_name] => address
+                                    [value] => Plot 596a adekunle adebola afun
+                                )
+
+                        )
+
+                    [referrer] => http://127.0.0.1:5500/shop/checkout/index.html
+                )
+
+            [log] => Array
+                (
+                    [start_time] => 1743451097
+                    [time_spent] => 3
+                    [attempts] => 1
+                    [errors] => 0
+                    [success] => 1
+                    [mobile] => 
+                    [input] => Array
+                        (
+                        )
+
+                    [history] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [type] => action
+                                    [message] => Attempted to pay with card
+                                    [time] => 3
+                                )
+
+                            [1] => Array
+                                (
+                                    [type] => success
+                                    [message] => Successfully paid with card
+                                    [time] => 3
+                                )
+
+                        )
+
+                )
+
+            [fees] => 118750
+            [fees_split] => 
+            [authorization] => Array
+                (
+                    [authorization_code] => AUTH_l7xzs1vvq4
+                    [bin] => 408408
+                    [last4] => 4081
+                    [exp_month] => 12
+                    [exp_year] => 2030
+                    [channel] => card
+                    [card_type] => visa 
+                    [bank] => TEST BANK
+                    [country_code] => NG
+                    [brand] => visa
+                    [reusable] => 1
+                    [signature] => SIG_uNatqwNBDsEOZdTGyOdk
+                    [account_name] => 
+                    [receiver_bank_account_number] => 
+                    [receiver_bank] => 
+                )
+
+            [customer] => Array
+                (
+                    [id] => 234217933
+                    [first_name] => 
+                    [last_name] => 
+                    [email] => omoyenney@gmail.com
+                    [customer_code] => CUS_omaffahbsnu5g81
+                    [phone] => 
+                    [metadata] => 
+                    [risk_action] => default
+                    [international_format_phone] => 
+                )
+
+            [plan] => 
+            [split] => Array
+                (
+                )
+
+            [order_id] => 
+            [paidAt] => 2025-03-31T19:58:19.000Z
+            [createdAt] => 2025-03-31T19:58:16.000Z
+            [requested_amount] => 7250000
+            [pos_transaction_data] => 
+            [source] => 
+            [fees_breakdown] => 
+            [connect] => 
+            [transaction_date] => 2025-03-31T19:58:16.000Z
+            [plan_object] => Array
+                (
+                )
+
+            [subaccount] => Array
+                (
+                )
+
+        )
+
+)
+
+Order Inserted Successfully: Reference = 452219_1743451094726 | Status = pending

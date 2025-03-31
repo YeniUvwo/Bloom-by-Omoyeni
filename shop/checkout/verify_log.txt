@@ -1,3 +1,0 @@
-✅ Step 1: verify.php started
-✅ Step 2: Reference received: FLWR_1740081618644
-✅ Step 3: Loading config.php

@@ -1,59 +1,102 @@
 <?php
 session_start();
-header("Content-Type: application/json");
+require 'config.php';
 
-// Add CORS headers
-header("Access-Control-Allow-Origin: *"); // Allow all domains (or specify your domain)
-header("Access-Control-Allow-Methods: GET, POST, OPTIONS"); // Allow specific HTTP methods
-header("Access-Control-Allow-Headers: Content-Type, Authorization"); // Allow specific headers
-
-require_once "config.php";
-
-// Retrieve JSON data from the request body
-$data = json_decode(file_get_contents("php://input"), true);
-
-if (!isset($data['reference']) || empty($data['reference'])) {
-    echo json_encode(["status" => "error", "message" => "No reference supplied"]);
-    exit();
+if (!isset($_GET['reference'])) {
+    die("Invalid request.");
 }
 
-$reference = htmlspecialchars($data['reference']);
+$reference = htmlspecialchars($_GET['reference']);
+$paystack_secret_key = "sk_test_2b5c1066ff9f90f1d40a0ff22f254de0e006700e";
 
-// ✅ Step 1: Call Paystack API
-$url = "https://api.paystack.co/transaction/verify/" . rawurlencode($reference);
+// Verify payment with Paystack API
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_URL, "https://api.paystack.co/transaction/verify/" . $reference);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_HTTPHEADER, ["Authorization: Bearer " . $PAYSTACK_SECRET]);
+curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    "Authorization: Bearer " . $paystack_secret_key,
+    "Content-Type: application/json"
+]);
 
 $response = curl_exec($ch);
-$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-$curlError = curl_error($ch);
 curl_close($ch);
-
-if (!$response) {
-    echo json_encode(["status" => "error", "message" => "cURL Error: " . $curlError]);
-    exit();
-}
 
 $result = json_decode($response, true);
 
-// ✅ Step 2: Handle Verification Result
-if ($httpCode === 200 && isset($result['data']['status']) && $result['data']['status'] === 'success') {
-    // Set session data
-    $_SESSION['orderId'] = $reference;
-    $_SESSION['customerFirstName'] = $data['firstName'] ?? "Not Provided";
-    $_SESSION['customerLastName'] = $data['lastName'] ?? "";
-    $_SESSION['customerEmail'] = $data['email'] ?? "Not Provided";
+// Log response for debugging
+file_put_contents("log.txt", "Paystack Full Response: " . print_r($result, true) . "\n", FILE_APPEND);
 
-    // Debug: Log session data
-    error_log("Session Data Set in verify.php: " . print_r($_SESSION, true));
+// Check if Paystack verification was successful
+if ($result['status'] && isset($result['data']) && $result['data']['status'] === "success") {
+    $amount = $result['data']['amount'] / 100; // Convert from kobo to naira
+    $email = $result['data']['customer']['email'] ?? "";
+    $status = "pending"; // Default status before inserting
+    $payment_mode = "Paystack";
+    $created_at = date("Y-m-d H:i:s");
+    $phone = $result['data']['customer']['phone'];
 
-    session_write_close(); // Ensure session is saved
-    echo json_encode(["status" => "success", "message" => "Payment verified. Redirecting..."]);
-    exit();
+    // Retrieve metadata safely
+    $metadata = $result['data']['metadata']['custom_fields'] ?? [];
+    $user_id = 0;
+    $firstName = $lastName = $address = "";
+
+    foreach ($metadata as $field) {
+        if (isset($field['variable_name']) && isset($field['value'])) { 
+            if ($field['variable_name'] === 'userId') { 
+                $user_id = (int) preg_replace('/\D/', '', $field['value']); // Remove non-numeric characters
+            } elseif ($field['variable_name'] === 'firstName') {
+                $firstName = $field['value'];
+            } elseif ($field['variable_name'] === 'lastName') {
+                $lastName = $field['value'];
+            } elseif ($field['variable_name'] === 'address') {
+                $address = $field['value'];
+            } elseif ($field['variable_name'] === 'phone' && !empty($field['value'])) {
+                $phone = $field['value'];
+            }
+        }
+    }    
+
+    if ($user_id === 0) {
+        file_put_contents("log.txt", "User ID Extraction Failed\n", FILE_APPEND);
+        echo json_encode(["status" => "error", "message" => "User ID is invalid"]);
+        exit();
+    }
+
+    // Insert payment details into the database
+    $query = "INSERT INTO orders (user_id, firstName, lastName, email, phone, address, total_price, payment_mode, reference, status, created_at) 
+              VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    
+    $stmt = $conn->prepare($query);
+    if ($stmt) {
+        $stmt->bind_param("issssssssss", $user_id, $firstName, $lastName, $email, $phone, $address, $amount, $payment_mode, $reference, $status, $created_at);
+
+        if ($stmt->execute()) {
+            file_put_contents("log.txt", "Order Inserted Successfully: Reference = " . $reference . " | Status = " . $status . "\n", FILE_APPEND);
+            
+            // ✅ Now update the status to "paid" after inserting
+            $status = "paid";
+            $updateQuery = "UPDATE orders SET status = ? WHERE reference = ?";
+            $updateStmt = $conn->prepare($updateQuery);
+            if ($updateStmt) {
+                $updateStmt->bind_param("ss", $status, $reference);
+                $updateStmt->execute();
+                $updateStmt->close();
+            }
+
+            $_SESSION['order_reference'] = $reference;
+            header("Location: order_success.php");
+            exit();
+        } else {
+            file_put_contents("log.txt", "Database Insert Error: " . $stmt->error . "\n", FILE_APPEND);
+        }
+        $stmt->close();
+    } else {
+        file_put_contents("log.txt", "SQL Statement Preparation Failed: " . $conn->error . "\n", FILE_APPEND);
+        echo json_encode(["status" => "error", "message" => "Database statement preparation failed"]);
+    }
 } else {
-    echo json_encode(["status" => "error", "message" => "Payment verification failed."]);
-    exit();
+    file_put_contents("log.txt", "Invalid Order Reference: " . $reference . "\n", FILE_APPEND);
+    echo json_encode(["status" => "error", "message" => "Invalid Order Reference"]);
 }
+
 ?>
